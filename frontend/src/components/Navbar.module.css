@@ -1,0 +1,32 @@
+*,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.navItem {
+	position: relative;
+	box-sizing: border-box;
+}
+.navItem:after {
+	content: "";
+	position: absolute;
+	background-color: #b794f4;
+	height: 4px;
+	width: 0;
+	left: 0;
+	bottom: -4px;
+	border-radius: 10px;
+	transition: 0.3s;
+  margin-top: 4px;
+}
+.navItem:hover:after {
+	width: 100%;
+}
+
+.activeStyle {
+	border-bottom: 4px solid #B794F4;
+}
+.defaultStyle {
+	border-bottom: 4px solid transparent;
+}
