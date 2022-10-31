@@ -4,13 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from "@chakra-ui/react"
+import { BrowserRouter } from "react-router-dom"
+import { extendTheme } from "@chakra-ui/react"
+
+// 2. Call `extendTheme` and pass your custom values
+const theme = extendTheme({
+	colors: {
+		black: "#111",
+		white: "#fff",
+		secondary: "#06e3fd",
+	},
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<ChakraProvider>
-			<App />
-		</ChakraProvider>
+		<BrowserRouter>
+			<ChakraProvider theme={theme}>
+				<App />
+			</ChakraProvider>
+		</BrowserRouter>
 	</React.StrictMode>
 );
 

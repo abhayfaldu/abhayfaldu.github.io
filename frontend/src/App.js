@@ -1,21 +1,20 @@
-import { Box } from "@chakra-ui/react";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
+import Home from "./components/home/Home";
+import Navbar from "./components/navbar/Navbar";
+import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
 
 function App() {
-  return (
-    <div className="App">
-      
-      {
-        // todo remove the top line for responsive
-      }
-      {/* <Box
-        h={"3px"}
-        w={"100%"}
-				bg={["green", "red", "blue", "yellow"]}
-      ></Box> */}
-      
+	return (
+		<div className="App">
 			<Navbar />
+			<Home />
+			<About />
+			<Skills />
+			<Projects />
+			<Contact />
 		</div>
 	);
 }
