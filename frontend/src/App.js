@@ -1,18 +1,16 @@
 import "./App.css";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-import Home from "./components/home/Home";
-import Navbar from "./components/navbar/Navbar";
-import Projects from "./components/projects/Projects";
-import Skills from "./components/skills/Skills";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
 function App() {
 	return (
-		<div className="App">
+		<div className="App" style={{ backgroundColor: "#161B40" }}>
 			<Navbar />
 			<Home />
 			<About />
-			<Skills />
 			<Projects />
 			<Contact />
 		</div>
