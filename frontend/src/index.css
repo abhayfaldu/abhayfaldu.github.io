@@ -1,7 +1,26 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	scroll-behavior: smooth;
+}
+html {
+	font-size: 18px;
+}
+
+::-webkit-scrollbar {
+	width: 0.9rem;
+	height: 0.9rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #161b40;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #43bee5;
+	margin-bottom: 0.5em;
+	border-radius: 100vw;
+	border: 0.3rem solid #161b40;
 }

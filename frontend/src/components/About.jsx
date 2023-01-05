@@ -1,73 +1,84 @@
-import { Box, Button, Flex, Img, Link, Text, VStack } from "@chakra-ui/react";
+import {
+	Box,
+	Center,
+	Flex,
+	Img,
+	Link,
+	SimpleGrid,
+	Text,
+} from "@chakra-ui/react";
 import React from "react";
 
 const About = () => {
 	return (
-		<Flex
-			id="about"
-			bg={"#161B40"}
-			align="center"
-			justify={"center"}
-			color="#fff"
-			h={"100vh"}
-		>
-			<Flex
-				w={["95%", "95%", "95%", "1000px"]}
-				flexDir={["column", "column", "row", "row"]}
-				transform={["scale(0.8)", "scale(0.88)", "scale(1)", "scale(1)"]}
+		<Center id="about" bg={"#161B40"} color="#fff" py={"100px"}>
+			<SimpleGrid
+				w={["100%", "100%", "100%", "1100px"]}
+				columns={[1, 1, 2]}
+				px="1rem"
 			>
 				{/* image */}
-				<Flex w={["full", "full", "50%"]} p={["40px", "40px", 0]} mr="50px" align='center' justify={"center"} >
-					<Img src="/abhay.jpg" borderRadius={"50%"} w="80%" />
+				<Flex align={["center"]} justify={["center", "center", "", "start"]}>
+					<Img
+						src="/assets/abhay.jpg"
+						borderRadius={"50%"}
+						w={["70%", "60%", "70%", "80%"]}
+					/>
 				</Flex>
 
 				{/* text */}
 				<Flex
-					w={["full", "full", "50%"]}
-					// fontWeight="bold"
 					flexDir={"column"}
-					justify="center"
-					mx={"10px"}
+					justify={["flex-end", "center", "flex-end", "flex-start"]}
+					textAlign={["center", "center", "left", "left"]}
 				>
-					<Text fontSize={"20px"} mb="20px">
-						About me
-					</Text>
-					<Text fontSize={"30px"} lineHeight="1.3" color={"#43BEE5"}>
+					<Box
+						h={"80px"}
+						mb={[0, 0, 4, 0]}
+						py={5}
+						marginTop={["", "-80px", "0", "0"]}
+						bgGradient={[
+							"",
+							"linear(to-t, #161B40ff, #161B40af, #161B4000)",
+							"",
+							"",
+						]}
+					>
+						<Text fontSize={["1rem", "1.3rem", "1.3rem", "1.5rem"]}>
+							About me 😀
+						</Text>
+					</Box>
+					<Text
+						fontSize={["1.5rem", "1.8rem", "", "2rem"]}
+						lineHeight="1.3"
+						color={"#43BEE5"}
+						mb={6}
+					>
 						I am an enthusiastic learner and passionate full-stack web
 						developer.
 					</Text>
-					<Text fontSize={"14px"} mt="10px">
+					<Text fontSize={["0.7rem", "0.8rem", "", "1rem"]} mb={8}>
 						I am capable of building production-ready websites using MERN
 						technologies and also excited to work with a great team in a great
 						organization and learn more from them.
 					</Text>
-					<VStack align={"flex-start"} mt="20px">
-						<Text color={"#43BEE5"} lineHeight="1">
-							Name:&nbsp;
-							<span style={{ color: "#fff" }}>Abhay Faldu</span>
-						</Text>
-						<Text color={"#43BEE5"}>
-							Email:&nbsp;
-							<span style={{ color: "#fff" }}>abhayfadlu1922@gmail.com</span>
-						</Text>
-					</VStack>
 					<Link
 						href="#contact"
-						mt="35px"
-						textAlign={"center"}
+						w={"150px"}
+						mx={["auto", "auto", "0", "0"]}
 						py="10px"
+						align="center"
 						borderRadius="5px"
 						bg="#43BEE5"
 						color="#000"
-						fontSize={"18px"}
+						fontSize={["0.8rem", "1rem", "1rem", "1.2rem"]}
 						fontWeight={"600"}
-						w={"150px"}
 					>
 						Contact me
 					</Link>
 				</Flex>
-			</Flex>
-		</Flex>
+			</SimpleGrid>
+		</Center>
 	);
 };
 

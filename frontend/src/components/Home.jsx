@@ -1,60 +1,62 @@
-import { Box, Button, Center, Flex, Img, Text, VStack } from "@chakra-ui/react";
-import React, { useState } from "react";
+import {
+	Box,
+	Center,
+	Flex,
+	Img,
+	Link,
+	SimpleGrid,
+	Text,
+} from "@chakra-ui/react";
 
 const Home = () => {
 	return (
-		<Flex
-			id="home"
-			pt='60px'
-			bg={"#161B40"}
-			align="center"
-			justify={"center"}
-			color="#fff"
-			h={"100vh"}
-			transform={{md: "margin-top: -30px"}}
-		>
-			<Flex
-				w={["95%", "95%", "95%", "1000px"]}
-				flexDir={["column", "column", "row", "row"]}
+		<Center id="home" color="#fff">
+			<SimpleGrid
+				w={["100%", "100%", "100%", "1100px"]}
+				gridTemplateColumns={["1", "1", "55fr 45fr"]}
+				px={"1rem"}
+				py={"5rem"}
 			>
 				<Flex
-					w={["full", "full", "50%"]}
 					fontWeight="bold"
 					flexDir={"column"}
 					justify="center"
-					ml={["40px", "40px", 0]}
+					textAlign={["center", "center", "left"]}
 				>
-					<Text textAlign={"left"} fontSize={["18px", "22px", "30px"]}>
-						Hello world!
+					<Text fontSize={["1rem", "1.3rem", "1.1rem", "1.4rem"]} mb={6}>
+						Namaste &nbsp; 🙏🏻
 					</Text>
-					<Text textAlign={"left"} fontSize={["20px", "24px", "32px"]}>
-						this is Abhay Faldu
-					</Text>
-					<Text
-						textAlign={"left"}
-						color={"#43BEE5"}
-						fontSize={["22px", "24px", "28px", "38px"]}
-					>
-						Full Stack Web Developer
-					</Text>
-					<Button
-						bg={"#43BEE5"}
-						size="lg"
-						variant={"solid"}
+					<Box lineHeight={1.3} fontSize={["1.5rem", "2rem", "2rem", "2.5rem"]}>
+						<Text>I'm Abhay Faldu</Text>
+						<Text color={"#43BEE5"}>A Full Stack Web Developer</Text>
+					</Box>
+					<Link
+						href=""
+						download
+						w={"150px"}
+						my={"2rem"}
+						mx={["auto", "auto", "0", "0"]}
+						py="10px"
+						align="center"
+						borderRadius="5px"
+						bg="#43BEE5"
 						color="#000"
-						w={"100px"}
-						mt={"20px"}
+						fontSize={["0.8rem", "1rem", "1rem", "1.2rem"]}
+						fontWeight={"600"}
 					>
 						Resume
-					</Button>
+					</Link>
 				</Flex>
 
 				{/* image */}
-				<Box w={["full", "80%", "50%"]} p={["40px", "40px", 0]}>
-					<Img src="/home-svg.png" borderRadius={"50%"}  />
+				<Box mt={["0", "-24rem", "0"]}>
+					<Img
+						src="/assets/Website-Creator-amico.svg"
+						opacity={["1", "0.1", "1"]}
+					/>
 				</Box>
-			</Flex>
-		</Flex>
+			</SimpleGrid>
+		</Center>
 	);
 };
 

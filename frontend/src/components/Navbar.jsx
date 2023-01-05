@@ -1,72 +1,69 @@
-import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
+import { Center, Flex, Link, Text } from "@chakra-ui/react";
 import React from "react";
+import MenuDrawer from "./MenuDrawer";
 
 const Navbar = () => {
 	return (
 		<>
-			<Flex
+			<Center
+				h={"4rem"}
+				bg={"#161B40e0"}
+				color="#fff"
+				zIndex={"100"}
 				position={"sticky"}
 				top={0}
 				left={0}
-				zIndex={"100"}
-				bg={"#161B40"}
-				color="#fff"
-				h={"60px"}
-				alignItems="center"
-				justify={"center"}
+				backdropFilter="auto"
+				backdropBlur="62px"
 			>
 				<Flex
-					justify={"space-between"}
-					p={0}
+					w={["100%", "100%", "100%", "1100px"]}
+					px="1rem"
 					alignItems="center"
-					w={["95%", "95%", "95%", "1000px"]}
+					justify={"space-between"}
 				>
-					<Text fontWeight={"bold"} fontFamily="sans-serif" fontSize={"25px"}>
+					{/* logo */}
+					<Text
+						fontFamily="sans-serif"
+						fontSize={["1.3rem", "1.7rem", "2rem"]}
+						fontWeight={"bold"}
+					>
 						Abhay
 					</Text>
-					<Flex gap={3} align="center">
-						<Flex display={["none", "none", "block", "block"]} w={"400px"}>
-							<Flex w={"full"} justify={"space-around"}>
-								<Link href="#home">Home</Link>
-								<Link href="#about">About Me</Link>
-								<Link href="#skills">Skills</Link>
-								<Link href="#projects">Projects</Link>
-								<Link href="#contact">Contact</Link>
-							</Flex>
-						</Flex>
+
+					{/* links */}
+					<Flex
+						gap={5}
+						display={["none", "none", "flex", "flex"]}
+						justify={"space-around"}
+						align={"center"}
+					>
+						<Link href="#home">Home</Link>
+						<Link href="#about">About Me</Link>
+						<Link href="#skills">Skills</Link>
+						<Link href="#projects">Projects</Link>
+						<Link href="#contact">Contact</Link>
 						<Link
-							href="#resume"
-							textAlign={"center"}
-							py="7px"
+							href="./assets/Abhay_Faldu_Resume.pdf"
+							download
+							w={"100px"}
+							textAlign="center"
+							display={["none", "none", "block", "block"]}
+							py="0.5rem"
 							borderRadius="5px"
 							bg="#43BEE5"
 							color="#000"
-							fontSize={"16px"}
+							fontSize={"1rem"}
 							fontWeight={"600"}
-							w={"100px"}
 						>
 							Resume
 						</Link>
 					</Flex>
+
+					{/* menu drawer */}
+					<MenuDrawer />
 				</Flex>
-			</Flex>
-			<Flex w={"full"} display={["block", "block", "none", "none"]}>
-				<Flex
-					py="10px"
-					borderTop={"1px solid #fff"}
-					borderBottom={"1px solid #fff"}
-					color={"#fff"}
-					w="100%"
-					justify={"space-around"}
-					fontSize={["14px", "16px"]}
-				>
-					<Link href="#home">Home</Link>
-					<Link href="#about">About Me</Link>
-					<Link href="#skills">Skills</Link>
-					<Link href="#projects">Projects</Link>
-					<Link href="#contact">Contact</Link>
-				</Flex>
-			</Flex>
+			</Center>
 		</>
 	);
 };

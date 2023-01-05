@@ -1,9 +1,0 @@
-:root {
-	--main-purple: #250742;
-}
-.nav__main {
-	width: 100%;
-	background: var(--main-purple);
-	color: white;
-	background: #403ec4b7;
-}
