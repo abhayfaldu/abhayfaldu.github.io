@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.ccb1e230.css","mappings":"AAAA,EAGE,qBAAsB,CAFtB,QAAS,CACT,SAAU,CAGV,sBAAuB,CADvB,oBAEF","sources":["index.css"],"sourcesContent":["* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  text-decoration: none;\n  scroll-behavior: smooth;\n}\n"],"names":[],"sourceRoot":""}
