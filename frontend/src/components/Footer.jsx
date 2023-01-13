@@ -3,10 +3,10 @@ import React from "react";
 
 const Footer = () => {
 	return (
-		<Center id="home" color="#fff">
-			<Flex w={["100%", "100%", "100%", "1100px"]} px={"1rem"} py={"5rem"}>
-				<Text m="auto" fontSize={"1.2rem"}>
-					Copyright © | Abhay Faldu | 2023
+		<Center flexDir={"column"} py={20}>
+			<Flex w={["100%", "100%", "100%", "1100px"]} px={"1rem"}>
+				<Text m="auto" fontSize={"1.5rem"}>
+					Designed and Developed by Abhay Faldu, @ 2023 All rights reserved.
 				</Text>
 			</Flex>
 		</Center>

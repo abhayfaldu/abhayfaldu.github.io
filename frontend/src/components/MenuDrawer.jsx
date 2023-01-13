@@ -23,11 +23,10 @@ const MenuDrawer = () => {
 	return (
 		<>
 			<HamburgerIcon
-				w={5}
-				h={5}
+				w={6}
+				h={6}
 				onClick={onOpen}
-				display={["block", "block", "none", "none"]}
-				_hover={{ border: "1px solid white" }}
+				display={["block", "block", "block", "none"]}
 			/>
 			<Drawer
 				isOpen={isOpen}
@@ -37,11 +36,8 @@ const MenuDrawer = () => {
 				finalFocusRef={btnRef}
 			>
 				<DrawerOverlay />
-				<DrawerContent bg={"#161B40"} color={"#fff"}>
-					<DrawerCloseButton
-						color={"white"}
-						_hover={{ border: "1px solid white" }}
-					/>
+				<DrawerContent>
+					<DrawerCloseButton color={"white"} />
 					<DrawerHeader />
 					<DrawerBody display={"flex"} flexDir={"column"}>
 						<Link href="#home" style={linkStyle} onClick={onClose}>
@@ -53,11 +49,14 @@ const MenuDrawer = () => {
 						<Link href="#skills" style={linkStyle} onClick={onClose}>
 							Skills
 						</Link>
+						<Link href="#githubStats" style={linkStyle} onClick={onClose}>
+							Github Stats
+						</Link>
 						<Link href="#projects" style={linkStyle} onClick={onClose}>
 							Projects
 						</Link>
-						<Link href="#contact" style={linkStyle} onClick={onClose}>
-							Contact
+						<Link href="#getInTouch" style={linkStyle} onClick={onClose}>
+							Get In Touch
 						</Link>
 					</DrawerBody>
 				</DrawerContent>

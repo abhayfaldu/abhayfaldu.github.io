@@ -1,7 +1,7 @@
 import {
-	Box,
 	Center,
 	Flex,
+	Heading,
 	Img,
 	Link,
 	SimpleGrid,
@@ -11,71 +11,82 @@ import React from "react";
 
 const About = () => {
 	return (
-		<Center id="about" bg={"#161B40"} color="#fff" py={"100px"}>
+		<Center id="about" flexDir={"column"} color="#000" py={20}>
+			<Heading letterSpacing={[2,2,10]}>
+				About me
+			</Heading>
 			<SimpleGrid
-				w={["100%", "100%", "100%", "1100px"]}
+				w={["100%", "80%", "100%", "100%", "1100px"]}
 				columns={[1, 1, 2]}
-				px="1rem"
+				px={4}
+				pt={10}
 			>
 				{/* image */}
-				<Flex align={["center"]} justify={["center", "center", "", "start"]}>
+				<Flex align={["center"]} justify={["center", "center", "start"]}>
 					<Img
 						src="/assets/abhay.jpg"
+						w={["70%", "60%", "85%"]}
 						borderRadius={"50%"}
-						w={["70%", "60%", "70%", "80%"]}
+						border={"2px solid #43BEE5"}
+						mb={[6, 6, 0]}
 					/>
 				</Flex>
 
 				{/* text */}
 				<Flex
 					flexDir={"column"}
-					justify={["flex-end", "center", "flex-end", "flex-start"]}
+					justify={["flex-end", "center", "center", "center"]}
 					textAlign={["center", "center", "left", "left"]}
+					gap={6}
 				>
-					<Box
-						h={"80px"}
-						mb={[0, 0, 4, 0]}
-						py={5}
-						marginTop={["", "-80px", "0", "0"]}
-						bgGradient={[
-							"",
-							"linear(to-t, #161B40ff, #161B40af, #161B4000)",
-							"",
-							"",
-						]}
-					>
-						<Text fontSize={["1rem", "1.3rem", "1.3rem", "1.5rem"]}>
-							About me 😀
-						</Text>
-					</Box>
 					<Text
 						fontSize={["1.5rem", "1.8rem", "", "2rem"]}
 						lineHeight="1.3"
-						color={"#43BEE5"}
-						mb={6}
+						color={"#000"}
+						fontWeight={600}
 					>
-						I am an enthusiastic learner and passionate full-stack web
-						developer.
+						I am <span style={{ color: "#43BEE5" }}>Abhay Faldu,</span> an
+						enthusiastic learner and passionate full-stack web developer 🧑🏻‍💻.
 					</Text>
-					<Text fontSize={["0.7rem", "0.8rem", "", "1rem"]} mb={8}>
+					<Text
+						fontSize={["0.7rem", "0.8rem", "0.8rem", "1rem"]}
+						fontWeight="bold"
+					>
 						I am capable of building production-ready websites using MERN
 						technologies and also excited to work with a great team in a great
 						organization and learn more from them.
 					</Text>
-					<Link
-						href="#contact"
-						w={"150px"}
-						mx={["auto", "auto", "0", "0"]}
-						py="10px"
-						align="center"
-						borderRadius="5px"
-						bg="#43BEE5"
-						color="#000"
-						fontSize={["0.8rem", "1rem", "1rem", "1.2rem"]}
-						fontWeight={"600"}
-					>
-						Contact me
-					</Link>
+					<Flex gap={4}>
+						<Link
+							href={"#getInTouch"}
+							w={"9.5rem"}
+							textAlign="center"
+							// display={["none", "none", "block", "block"]}
+							py={2}
+							borderRadius={8}
+							bg="#43bee5"
+							mt={2}
+							fontSize={"1rem"}
+							fontWeight={700}
+						>
+							Get in touch
+						</Link>
+						<Link
+							href={"/assets/Abhay-Faldu-Resume.pdf"}
+							download
+							w={"9.5rem"}
+							textAlign="center"
+							// display={["none", "none", "block", "block"]}
+							py={2}
+							borderRadius={8}
+							bg="#43bee5"
+							mt={2}
+							fontSize={"1rem"}
+							fontWeight={700}
+						>
+							Resume
+						</Link>
+					</Flex>
 				</Flex>
 			</SimpleGrid>
 		</Center>

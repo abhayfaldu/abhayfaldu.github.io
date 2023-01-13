@@ -5,22 +5,23 @@
 	text-decoration: none;
 	scroll-behavior: smooth;
 }
-html {
-	font-size: 18px;
+::-webkit-scrollbar {
+	width: 0.6rem;
+	height: 0.6rem;
+	background: transparent;
 }
 
-::-webkit-scrollbar {
-	width: 0.9rem;
-	height: 0.9rem;
+body {
+	overflow: overlay;
 }
 
 ::-webkit-scrollbar-track {
-	background: #161b40;
+	background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #43bee5;
+	background-color: #08aeea;
+	background-image: linear-gradient(180deg, #08aeea 0%, #2af598 100%);
 	margin-bottom: 0.5em;
-	border-radius: 100vw;
-	border: 0.3rem solid #161b40;
+	border-radius: 0.3rem;
 }

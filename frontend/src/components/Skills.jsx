@@ -1,95 +1,100 @@
-import { Box, Center, Img, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+	Center,
+	Heading,
+	Img,
+	SimpleGrid,
+	Text,
+} from "@chakra-ui/react";
 import React from "react";
+import Tools from "./Tools";
 
 const skills = [
 	{
-		img: "/assets/techStacks/icons8-react.svg",
-		title: "ReactJS",
-	},
-	{
-		img: "/assets/techStacks/icons8-javascript.svg",
-		title: "JavaScript",
-	},
-	{
-		img: "/assets/techStacks/icons8-express-js.svg",
-		title: "ExpressJS",
-	},
-	{
-		img: "/assets/techStacks/icons8-node-js.svg",
-		title: "NodeJS",
-	},
-	{
-		img: "/assets/techStacks/mongodb.svg",
-		title: "MongoDB",
-	},
-	{
-		img: "/assets/techStacks/icons8-chakra-ui.svg",
-		title: "Chakra UI",
-	},
-	{
-		img: "/assets/techStacks/icons8-html-5.svg",
+		img: "/assets/skills/html-5.svg",
 		title: "HTML",
 	},
 	{
-		img: "/assets/techStacks/icons8-css3.svg",
+		img: "/assets/skills/css3.svg",
 		title: "CSS",
 	},
 	{
-		img: "/assets/techStacks/rest-api.svg",
+		img: "/assets/skills/javascript.svg",
+		title: "JavaScript",
+	},
+	{
+		img: "/assets/skills/typescript.png",
+		title: "TypeScript",
+	},
+	{
+		img: "/assets/skills/mongodb.svg",
+		title: "MongoDB",
+	},
+	{
+		img: "/assets/skills/express-js.svg",
+		title: "ExpressJS",
+	},
+	{
+		img: "/assets/skills/react.svg",
+		title: "ReactJS",
+	},
+	{
+		img: "/assets/skills/node-js.svg",
+		title: "NodeJS",
+	},
+	{
+		img: "/assets/skills/redux.svg",
+		title: "Redux",
+	},
+	{
+		img: "/assets/skills/chakra-ui.svg",
+		title: "Chakra UI",
+	},
+	{
+		img: "/assets/skills/http.png",
 		title: "HTTP & REST API",
 	},
 ];
 
 const Skills = () => {
 	return (
-		<Center
-			id="skills"
-			bg={"#161B40"}
-			color="#fff"
-			py={"100px"}
-			flexDir="column"
-		>
-			<Center
-				h="50px"
-				fontSize={["0.8rem", "1.2rem", "1.5rem"]}
-				position="relative"
-				top={0}
-				left="0"
-				fontWeight="bold"
-				mb={4}
-				>
-				Skills
-			</Center>
+		<Center id="skills" py={20} flexDir="column" bg={"#43bee5"}>
+			<Heading letterSpacing={10}>🚀 Skills 🚀</Heading>
 			<SimpleGrid
-				w={["100%", "100%", "100%", "1100px"]}
-				px={"1rem"}
-				columns={[2, 3, 4]}
-				gap={["0.7rem", "1.2rem", "1.5rem"]}
-				py={[0, 5, 10]}
-				fontSize={["1rem", "1rem", "1.5rem"]}
+				mx={"auto"}
+				w={["80%", "90%", "100%", "85%", "1000px"]}
+				px={4}
+				py={[8, 0]}
+				columns={[2, 3, 4, 5]}
+				gap={[0, 3, 4]}
+				mt={[5, 5, 10]}
+				fontSize={["1rem", "1rem", "1.2rem"]}
 				textAlign="center"
+				bgColor={["#fff", "transparent"]}
+				borderRadius={["0.5rem"]}
 			>
 				{skills.length > 0 &&
 					skills.map((skill, index) => (
 						<Center
 							boxSizing="border-box"
 							flexDir={"column"}
-							p={["", "0.7rem", "1rem"]}
+							bg="#fff"
+							p={[3, 3, 4]}
 							key={index}
-							borderRadius={"0.5rem"}
-							bg="#292e5d"
-							boxShadow="rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px"
+							borderRadius={[0, "0.5rem"]}
+							boxShadow={[0, "md"]}
 						>
 							<Img
-								mb={[0,2,4]}
 								src={skill.img}
+								mb={[3, 2, 4]}
 								alt="skill-icon"
-								width={["80px", "100px", "100px"]}
+								width={["70px", "100px", "100px"]}
 							/>
 							<Text>{skill.title}</Text>
 						</Center>
 					))}
 			</SimpleGrid>
+
+			<Tools />
 		</Center>
 	);
 };

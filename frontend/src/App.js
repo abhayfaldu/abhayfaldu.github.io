@@ -1,23 +1,27 @@
+import { Box } from "@chakra-ui/react";
 import "./App.css";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
+import About from "./Components/About";
+import Contact from "./Components/GetInTouch";
+import Footer from "./Components/Footer";
+import GithubStats from "./Components/GithubStats";
+import Home from "./Components/Home";
+import Navbar from "./Components/Navbar";
+import Projects from "./Components/Projects";
+import Skills from "./Components/Skills";
 
 function App() {
 	return (
-		<div className="App" style={{ backgroundColor: "#161B40" }}>
+		<Box className="App" bg={"Purple.900"}>
+			{/* <Box bg={["red", "green", "blue", 'aqua']}>g</Box> */}
 			<Navbar />
 			<Home />
 			<About />
 			<Skills />
+			<GithubStats />
 			<Projects />
 			<Contact />
 			<Footer />
-		</div>
+		</Box>
 	);
 }
 

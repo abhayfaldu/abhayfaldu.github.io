@@ -1,20 +1,17 @@
 import { Center, Flex, Link, Text } from "@chakra-ui/react";
-import React from "react";
 import MenuDrawer from "./MenuDrawer";
 
 const Navbar = () => {
 	return (
 		<>
 			<Center
-				h={"4rem"}
-				bg={"#161B40e0"}
-				color="#fff"
+				h={["2.5rem", "3rem", "3.5rem", "3.5rem"]}
 				zIndex={"100"}
 				position={"sticky"}
+				bgColor={"#43bee5"}
 				top={0}
 				left={0}
-				backdropFilter="auto"
-				backdropBlur="62px"
+				boxShadow={"lg"}
 			>
 				<Flex
 					w={["100%", "100%", "100%", "1100px"]}
@@ -24,37 +21,38 @@ const Navbar = () => {
 				>
 					{/* logo */}
 					<Text
-						fontFamily="sans-serif"
-						fontSize={["1.3rem", "1.7rem", "2rem"]}
+						fontFamily={"Rancho, Sans-serif"}
+						fontSize={["1.3rem", "1.8rem", "2.3rem"]}
 						fontWeight={"bold"}
 					>
-						Abhay
+						Abhay Faldu
 					</Text>
 
 					{/* links */}
 					<Flex
 						gap={5}
-						display={["none", "none", "flex", "flex"]}
+						display={["none", "none", "none", "flex"]}
 						justify={"space-around"}
 						align={"center"}
 					>
 						<Link href="#home">Home</Link>
 						<Link href="#about">About Me</Link>
-						<Link href="#skills">Skills</Link>
+						<Link href="#skills">Skills & Tools</Link>
+						<Link href="#githubStats">Github Stats</Link>
 						<Link href="#projects">Projects</Link>
-						<Link href="#contact">Contact</Link>
+						<Link href="#getInTouch">Get in touch</Link>
 						<Link
-							href="./assets/Abhay_Faldu_Resume.pdf"
+							href={"./assets/Abhay-Faldu-Resume.pdf"}
 							download
-							w={"100px"}
+							w={"150px"}
 							textAlign="center"
-							display={["none", "none", "block", "block"]}
+							display={["none", "block"]}
 							py="0.5rem"
 							borderRadius="5px"
-							bg="#43BEE5"
+							bg="#fff"
 							color="#000"
 							fontSize={"1rem"}
-							fontWeight={"600"}
+							fontWeight={700}
 						>
 							Resume
 						</Link>

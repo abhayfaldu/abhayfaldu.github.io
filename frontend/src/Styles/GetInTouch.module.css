@@ -1,0 +1,57 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	max-width: 40rem;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+.form input,
+.form textarea {
+	width: 100%;
+	padding: 0.5rem 0;
+	border: 0;
+	padding-left: 1rem;
+	background-color: transparent;
+	border-bottom: 2px solid lightgray;
+	border-radius: 15px;
+}
+
+.form button {
+	align-self: center;
+}
+
+.form input[type="submit"] {
+	padding: 0.5rem 0;
+	width: 9.5rem;
+	margin-top: 1rem;
+	background: #fff;
+	border: none;
+	cursor: pointer;
+	border-radius: 0.5rem;
+	font-weight: 700;
+}
+
+.form input:focus,
+.form textarea:focus {
+	outline: none;
+}
+
+.form textarea::placeholder,
+.form input::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #fff8;
+	opacity: 1; /* Firefox */
+}
+
+.form textarea:-ms-input-placeholder,
+.form input:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: #fff8;
+}
+
+.form textarea::-ms-input-placeholder,
+.form input::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: #fff8;
+}
