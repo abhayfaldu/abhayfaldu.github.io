@@ -1,9 +1,12 @@
 .form {
 	display: flex;
 	flex-direction: column;
+	/* width: 40rem; */
+	/* min-width: 10rem; */
 	max-width: 40rem;
 	gap: 2rem;
-	padding: 2rem;
+	padding: 2rem 0 2rem 2rem;
+	align-self: stretch;
 }
 
 .form input,
@@ -54,4 +57,11 @@
 .form input::-ms-input-placeholder {
 	/* Microsoft Edge */
 	color: #fff8;
+}
+
+@media all and (max-width: 479.5px) {
+	.form {
+		min-width: 20rem;
+		align-items: center;
+	}
 }

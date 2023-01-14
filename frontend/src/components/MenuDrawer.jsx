@@ -37,7 +37,7 @@ const MenuDrawer = () => {
 			>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerCloseButton color={"white"} />
+					<DrawerCloseButton />
 					<DrawerHeader />
 					<DrawerBody display={"flex"} flexDir={"column"}>
 						<Link href="#home" style={linkStyle} onClick={onClose}>

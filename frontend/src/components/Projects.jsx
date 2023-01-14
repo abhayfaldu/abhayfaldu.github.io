@@ -88,6 +88,7 @@ const Projects = () => {
 					{projectsData.map((project, index) => (
 						<>
 							<Flex
+								px={4}
 								gap={12}
 								flexDirection={
 									index % 2 === 0

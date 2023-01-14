@@ -1,14 +1,7 @@
-import {
-	Center,
-	Flex,
-	Heading,
-	Img,
-	SimpleGrid,
-	Text,
-} from "@chakra-ui/react";
+import { Center, Heading, Img, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
-const skills = [
+const tools = [
 	{
 		img: "/assets/tools/vs-code.svg",
 		title: "VS Code",
@@ -29,8 +22,8 @@ const skills = [
 
 const Tools = () => {
 	return (
-		<Flex flexDir={"column"}>
-			<Heading letterSpacing={10} textAlign="center" pt={20}>
+		<Center flexDir={"column"} bgColor="#222" pb={20} pt={10}>
+			<Heading letterSpacing={10} textAlign="center" color={"#fff"}>
 				🛠️ Tools 🛠️
 			</Heading>
 			<SimpleGrid
@@ -46,8 +39,8 @@ const Tools = () => {
 				borderRadius={["0.5rem"]}
 				mx="auto"
 			>
-				{skills.length > 0 &&
-					skills.map((skill, index) => (
+				{tools.length > 0 &&
+					tools.map((skill, index) => (
 						<Center
 							boxSizing="border-box"
 							flexDir={"column"}
@@ -67,7 +60,7 @@ const Tools = () => {
 						</Center>
 					))}
 			</SimpleGrid>
-		</Flex>
+		</Center>
 	);
 };
 

@@ -12,9 +12,7 @@ import React from "react";
 const About = () => {
 	return (
 		<Center id="about" flexDir={"column"} color="#000" py={20}>
-			<Heading letterSpacing={[2,2,10]}>
-				About me
-			</Heading>
+			<Heading letterSpacing={[2, 2, 10]}>About me</Heading>
 			<SimpleGrid
 				w={["100%", "80%", "100%", "100%", "1100px"]}
 				columns={[1, 1, 2]}
@@ -56,7 +54,7 @@ const About = () => {
 						technologies and also excited to work with a great team in a great
 						organization and learn more from them.
 					</Text>
-					<Flex gap={4}>
+					<Flex gap={4} justify={["center", "center", "start", "start"]}>
 						<Link
 							href={"#getInTouch"}
 							w={"9.5rem"}

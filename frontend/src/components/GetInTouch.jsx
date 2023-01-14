@@ -45,24 +45,29 @@ const GetInTouch = () => {
 			py={20}
 			bgColor="#43BEE5"
 		>
-			<Box w={["100%", "100%", "100%", "900px"]}>
+			<Box
+				w={["100%", "100%", "100%", "900px"]}
+				fontSize={[".8rem", "0.8rem", "1rem"]}
+				// overflow='hidden'
+			>
 				<Heading mb={10} letterSpacing={10}>
 					Get in touch
 				</Heading>
-				<Flex flexDir={["column", "row"]} gap={16} flex="1">
-					<Flex flexDir={"column"} gap={12}>
-						<Heading
-							size={"md"}
-							textAlign="left"
-							// color="#43BEE5"
-						>
+				<Flex
+					flexDir={["column", "row"]}
+					gap={[20, -14, 16]}
+					flex="1"
+					align={["center", "start"]}
+				>
+					<Flex flexDir={"column"} gap={12} align={["center", "start"]}>
+						<Heading size={"md"} textAlign="left" color="#fff">
 							Contact here
 						</Heading>
 						<Flex
 							flexDir={"column"}
 							textAlign="left"
 							gap={8}
-							fontSize={"1.2rem"}
+							// fontSize={"1.2rem"}
 						>
 							<Flex align={"center"} gap={4}>
 								<BsFillTelephoneForwardFill />
@@ -77,7 +82,10 @@ const GetInTouch = () => {
 								<Text>Jamnagar, Gujrat</Text>
 							</Flex>
 						</Flex>
-						<Flex fontSize={"2rem"} gap={8}>
+						<Flex
+							// fontSize={"2rem"}
+							gap={8}
+						>
 							<Link href="https://twitter.com/abhayfaldu19">
 								<BsTwitter />
 							</Link>
@@ -89,13 +97,8 @@ const GetInTouch = () => {
 							</Link>
 						</Flex>
 					</Flex>
-					<Box flex={2}>
-						<Heading
-							size={"md"}
-							textAlign="left"
-							pl={8}
-							// color="#43BEE5"
-						>
+					<Center flex={[1, 1, 2]} flexDir="column" align={["center", "start"]}>
+						<Heading size={"md"} textAlign="left" pl={8} color="#fff">
 							Or fill this form
 						</Heading>
 						<form ref={form} onSubmit={sendEmail} className={styles.form}>
@@ -114,7 +117,7 @@ const GetInTouch = () => {
 							/>
 							<input type="submit" value="Send" />
 						</form>
-					</Box>
+					</Center>
 				</Flex>
 			</Box>
 		</Center>
