@@ -102,17 +102,22 @@ const GetInTouch = () => {
 							Or fill this form
 						</Heading>
 						<form ref={form} onSubmit={sendEmail} className={styles.form}>
-							<input type="text" name="user_name" placeholder="name" required />
+							<input
+								type="text"
+								name="user_name"
+								placeholder="Enter your name"
+								required
+							/>
 							<input
 								type="email"
 								name="user_email"
-								placeholder="email"
+								placeholder="Enter your email"
 								required
 							/>
 							<textarea
 								rows="1"
 								name="message"
-								placeholder="message"
+								placeholder="Enter message"
 								required
 							/>
 							<input type="submit" value="Send" />
