@@ -31,7 +31,7 @@ const MenuDrawer = () => {
 			<Drawer
 				isOpen={isOpen}
 				placement="right"
-				size={"full"}
+				size={"xs"}
 				onClose={onClose}
 				finalFocusRef={btnRef}
 			>
