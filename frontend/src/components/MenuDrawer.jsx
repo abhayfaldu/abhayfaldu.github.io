@@ -17,7 +17,6 @@ const MenuDrawer = () => {
 
 	const linkStyle = {
 		margin: "10px",
-		textAlign: "center",
 	};
 
 	return (

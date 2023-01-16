@@ -1,10 +1,4 @@
-import {
-	Center,
-	Heading,
-	Img,
-	SimpleGrid,
-	Text,
-} from "@chakra-ui/react";
+import { Center, Heading, Img, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import Tools from "./Tools";
 
@@ -58,7 +52,7 @@ const skills = [
 const Skills = () => {
 	return (
 		<>
-			<Center id="skills" pt={20} pb={10} flexDir="column" bg={"#43bee5"}>
+			<Center id="skills" pt={20} pb={10} flexDir="column" bg={"primary.main"}>
 				<Heading letterSpacing={10}>🚀 Skills 🚀</Heading>
 				<SimpleGrid
 					mx={"auto"}
@@ -70,7 +64,7 @@ const Skills = () => {
 					mt={[5, 5, 10]}
 					fontSize={["1rem", "1rem", "1.2rem"]}
 					textAlign="center"
-					bgColor={["#fff", "transparent"]}
+					bgColor={["light.main", "transparent"]}
 					borderRadius={["0.5rem"]}
 				>
 					{skills.length > 0 &&
@@ -78,7 +72,7 @@ const Skills = () => {
 							<Center
 								boxSizing="border-box"
 								flexDir={"column"}
-								bg="#fff"
+								bg="light.main"
 								p={[3, 3, 4]}
 								key={index}
 								borderRadius={[0, "0.5rem"]}
@@ -94,9 +88,8 @@ const Skills = () => {
 							</Center>
 						))}
 				</SimpleGrid>
-
 			</Center>
-				<Tools />
+			<Tools />
 		</>
 	);
 };

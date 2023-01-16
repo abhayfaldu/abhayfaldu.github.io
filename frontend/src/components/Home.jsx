@@ -21,10 +21,11 @@ const Home = () => {
 				>
 					Uniting beautiful 👌🏻 design and powerful 💪🏻 technology to bring your
 					web vision to life.
-					<Flex color={"#43BEE5"} justify="center" mt={4} gap={4}>
+					<Flex color={"primary.main"} justify="center" mt={4} gap={4}>
 						<Link
 							href="https://twitter.com/abhayfaldu19"
-							border={"1px solid #fff"}
+							target="_blank"
+							border={"1px solid white"}
 							borderRadius={8}
 							p={4}
 						>
@@ -35,7 +36,8 @@ const Home = () => {
 						</Link>
 						<Link
 							href="https://www.linkedin.com/in/abhay-faldu-493b92211/"
-							border={"1px solid #fff"}
+							target="_blank"
+							border={"1px solid white"}
 							borderRadius={8}
 							p={4}
 						>

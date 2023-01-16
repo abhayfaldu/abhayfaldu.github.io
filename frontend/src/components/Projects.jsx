@@ -1,3 +1,4 @@
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
 	Box,
 	Center,
@@ -11,7 +12,8 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { ImPointRight } from "react-icons/im";
+import { FaHandPointRight } from "react-icons/fa";
+import { ImGithub } from "react-icons/im";
 
 const projectsData = [
 	{
@@ -137,7 +139,7 @@ const Projects = () => {
 											<Flex flexDir={"column"} gap={3}>
 												{project.features.map((el, index) => (
 													<Flex gap={2} align="center" key={index} pl={6}>
-														<ImPointRight color="#43BEE5" />
+														<FaHandPointRight color="primary.main" />
 														<Text>{el}</Text>
 													</Flex>
 												))}
@@ -156,7 +158,7 @@ const Projects = () => {
 											<Flex flexDir={"column"} gap={3}>
 												{project.techStacks.map((el, index) => (
 													<Flex gap={4} align="center" key={index} pl={6}>
-														<ImPointRight color="#43BEE5" />
+														<FaHandPointRight color="primary.main" />
 														<Text>{el}</Text>
 													</Flex>
 												))}
@@ -177,7 +179,7 @@ const Projects = () => {
 											<Flex flexDir={"column"} gap={3}>
 												{project.AreasOfResponsibility.map((el, index) => (
 													<Flex gap={4} align="center" key={index} pl={6}>
-														<ImPointRight color="#43BEE5" />
+														<FaHandPointRight color="primary.main" />
 														<Text>{el}</Text>
 													</Flex>
 												))}
@@ -189,30 +191,37 @@ const Projects = () => {
 									<Flex gap={8}>
 										<Link
 											href={project.deployLink}
+											target="_blank"
 											w={"9.5rem"}
 											py={2}
 											mt={2}
-											// color="#fff"
-											bg="#43bee5"
+											bg="primary.main"
 											textAlign="center"
 											borderRadius={"5px"}
 											fontSize={"1rem"}
 											fontWeight={700}
 										>
-											Deployed Link
+											<Flex align={"center"} gap={1} justify="center">
+												<ExternalLinkIcon />
+												<Text>Deployed Link</Text>
+											</Flex>
 										</Link>
 										<Link
 											href={project.githubLink}
+											target="_blank"
 											w={"9.5rem"}
 											textAlign="center"
 											py={2}
 											borderRadius={"5px"}
-											bg="#43bee5"
+											bg="primary.main"
 											mt={2}
 											fontSize={"1rem"}
 											fontWeight={700}
 										>
-											Github Repo
+											<Flex align={"center"} gap={1} justify="center">
+												<ImGithub />
+												<Text>GitHub Repo</Text>
+											</Flex>
 										</Link>
 									</Flex>
 								</Flex>

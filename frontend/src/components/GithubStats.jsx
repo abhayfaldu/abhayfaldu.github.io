@@ -4,7 +4,7 @@ import MyGitHubCalendar from "./MyGitHubCalendar";
 
 const GithubStats = () => {
 	return (
-		<Center id="githubStats" py={20} flexDir="column" bgColor={"#eee8"}>
+		<Center id="githubStats" py={20} flexDir="column" bgColor={"light.200"}>
 			<Heading mb={10} textAlign="center" letterSpacing={[2, 2, 10]}>
 				GitHub Calender & Statistics
 			</Heading>
@@ -14,7 +14,7 @@ const GithubStats = () => {
 				px={4}
 				w={["90%", "90%", "90%", "90%", "1100px"]}
 			>
-				<Link href="https://github.com/abhayfaldu">
+				<Link href="https://github.com/abhayfaldu" target="_blank">
 					<MyGitHubCalendar />
 				</Link>
 				<Flex
@@ -23,10 +23,10 @@ const GithubStats = () => {
 					w={["100%", "75%", "auto"]}
 					align="center"
 				>
-					<Link href="https://github.com/abhayfaldu">
+					<Link href="https://github.com/abhayfaldu" target="_blank">
 						<Img src="https://github-readme-streak-stats.herokuapp.com?user=abhayfaldu&theme=default&border_radius=8&color=#43BEE5" />
 					</Link>
-					<Link href="https://github.com/abhayfaldu">
+					<Link href="https://github.com/abhayfaldu" target="_blank">
 						<Img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=abhayfaldu&show_icons=true&theme=light&border_radius=8" />
 					</Link>
 				</Flex>

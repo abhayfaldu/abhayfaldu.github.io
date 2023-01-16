@@ -22,8 +22,8 @@ const tools = [
 
 const Tools = () => {
 	return (
-		<Center flexDir={"column"} bgColor="#222" pb={20} pt={10}>
-			<Heading letterSpacing={10} textAlign="center" color={"#fff"}>
+		<Center flexDir={"column"} bgColor="dark.200" pb={20} pt={10}>
+			<Heading letterSpacing={10} textAlign="center" color={"light.main"}>
 				🛠️ Tools 🛠️
 			</Heading>
 			<SimpleGrid
@@ -35,7 +35,7 @@ const Tools = () => {
 				mt={[5, 5, 10]}
 				fontSize={["1rem", "1rem", "1.2rem"]}
 				textAlign="center"
-				bgColor={["#fff", "transparent"]}
+				bgColor={["light.main", "transparent"]}
 				borderRadius={["0.5rem"]}
 				mx="auto"
 			>
@@ -44,7 +44,7 @@ const Tools = () => {
 						<Center
 							boxSizing="border-box"
 							flexDir={"column"}
-							bg="#fff"
+							bg="light.main"
 							p={[3, 3, 4]}
 							key={index}
 							borderRadius={[0, "0.5rem"]}

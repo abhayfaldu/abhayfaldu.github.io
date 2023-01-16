@@ -1,3 +1,4 @@
+import { DownloadIcon } from "@chakra-ui/icons";
 import { Center, Flex, Link, Text } from "@chakra-ui/react";
 import MenuDrawer from "./MenuDrawer";
 
@@ -8,13 +9,13 @@ const Navbar = () => {
 				h={["2.5rem", "3rem", "3.5rem", "3.5rem"]}
 				zIndex={"100"}
 				position={"sticky"}
-				bgColor={"#43bee5"}
+				bgColor={"primary.main"}
 				top={0}
 				left={0}
 				boxShadow={"lg"}
 			>
 				<Flex
-					w={["100%", "100%", "100%", "1100px"]}
+					w={["100%", "100%", "100%", "100%", "1100px"]}
 					px="1rem"
 					alignItems="center"
 					justify={"space-between"}
@@ -41,6 +42,7 @@ const Navbar = () => {
 						<Link href="#githubStats">Github Stats</Link>
 						<Link href="#projects">Projects</Link>
 						<Link href="#getInTouch">Get in touch</Link>
+
 						<Link
 							href={"./assets/Abhay-Faldu-Resume.pdf"}
 							download
@@ -49,12 +51,15 @@ const Navbar = () => {
 							display={["none", "block"]}
 							py="0.5rem"
 							borderRadius="5px"
-							bg="#fff"
-							color="#000"
+							bg="light.main"
+							color="dark"
 							fontSize={"1rem"}
 							fontWeight={700}
 						>
-							Resume
+							<Flex align={"center"} gap={1} justify="center">
+								<DownloadIcon />
+								<Text>Resume</Text>
+							</Flex>
 						</Link>
 					</Flex>
 
