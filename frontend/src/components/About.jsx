@@ -12,7 +12,7 @@ import React from "react";
 const About = () => {
 	return (
 		<Center id="about" flexDir={"column"} color="#000" py={20}>
-			<Heading letterSpacing={[2, 2, 10]}>About me</Heading>
+			<Heading letterSpacing={[2, 2, 10]} borderBottom={'1px solid black'} pb={2} pl={3}>About me</Heading>
 			<SimpleGrid
 				w={["100%", "80%", "100%", "100%", "1100px"]}
 				columns={[1, 1, 2]}

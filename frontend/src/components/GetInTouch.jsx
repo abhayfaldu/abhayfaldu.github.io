@@ -1,4 +1,12 @@
-import { Box, Center, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Center,
+	Divider,
+	Flex,
+	Heading,
+	Link,
+	Text,
+} from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
 import React, { useRef } from "react";
 import {
@@ -46,6 +54,7 @@ const GetInTouch = () => {
 			bgColor="#43BEE5"
 		>
 			<Box
+				className={styles.linksSection}
 				w={["100%", "100%", "100%", "900px"]}
 				fontSize={[".8rem", "0.8rem", "1rem"]}
 				// overflow='hidden'
@@ -60,7 +69,7 @@ const GetInTouch = () => {
 					align={["center", "start"]}
 				>
 					<Flex flexDir={"column"} gap={12} align={["center", "start"]}>
-						<Heading size={"md"} textAlign="left" color="#fff">
+						<Heading size={"md"} textAlign="left" color="#000">
 							Contact here
 						</Heading>
 						<Flex
@@ -97,10 +106,24 @@ const GetInTouch = () => {
 							</Link>
 						</Flex>
 					</Flex>
-					<Center flex={[1, 1, 2]} flexDir="column" align={["center", "start"]}>
-						<Heading size={"md"} textAlign="left" pl={8} color="#fff">
+
+					{/* form section */}
+					<Center
+						flex={[1, 1, 2]}
+						flexDir="column"
+						justify={["center", "flex-start"]}
+					>
+						{/* <Box w="full" > */}
+						<Heading
+							size={"md"}
+							w="full"
+							textAlign={["center", "left"]}
+							pl={8}
+							color="#fff"
+						>
 							Or fill this form
 						</Heading>
+						{/* </Box> */}
 						<form ref={form} onSubmit={sendEmail} className={styles.form}>
 							<input
 								type="text"

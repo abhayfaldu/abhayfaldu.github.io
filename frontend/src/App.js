@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import "./App.css";
 import About from "./Components/About";
 import Contact from "./Components/GetInTouch";
@@ -11,8 +11,7 @@ import Skills from "./Components/Skills";
 
 function App() {
 	return (
-		<Box className="App" bg={"Purple.900"}>
-			{/* <Box bg={["red", "green", "blue", 'aqua']}>g</Box> */}
+		<SimpleGrid className="App" >
 			<Navbar />
 			<Home />
 			<About />
@@ -21,7 +20,7 @@ function App() {
 			<Projects />
 			<Contact />
 			<Footer />
-		</Box>
+		</SimpleGrid>
 	);
 }
 

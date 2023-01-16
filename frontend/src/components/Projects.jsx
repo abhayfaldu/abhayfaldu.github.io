@@ -199,7 +199,7 @@ const Projects = () => {
 											fontSize={"1rem"}
 											fontWeight={700}
 										>
-											View Demo
+											Deployed Link
 										</Link>
 										<Link
 											href={project.githubLink}
