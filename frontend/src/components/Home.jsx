@@ -1,6 +1,7 @@
 import { Box, Center, Flex, Link, Text } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import styles from "../Styles/Home.module.css";
+import "animate.css"
 
 const Home = () => {
 	return (

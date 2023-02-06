@@ -1,5 +1,6 @@
 import { DownloadIcon } from "@chakra-ui/icons";
 import { Center, Flex, Link, Text } from "@chakra-ui/react";
+import styles from "../Styles/Navbar.module.css";
 import MenuDrawer from "./MenuDrawer";
 
 const Navbar = () => {
@@ -22,6 +23,7 @@ const Navbar = () => {
 				>
 					{/* logo */}
 					<Text
+						className={styles.nav__logo}
 						fontFamily={"Rancho, Sans-serif"}
 						fontSize={["1.3rem", "1.8rem", "2.3rem"]}
 						fontWeight={"bold"}
