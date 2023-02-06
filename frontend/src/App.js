@@ -1,4 +1,4 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import "./App.css";
 import About from "./Components/About";
 import Contact from "./Components/GetInTouch";
