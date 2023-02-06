@@ -27,7 +27,7 @@ const Home = () => {
 							target="_blank"
 							border={"1px solid white"}
 							borderRadius={8}
-							p={4}
+							p={3}
 						>
 							<Flex align={"center"} gap={4}>
 								<BsGithub fontSize={"1.5rem"} />
@@ -39,7 +39,7 @@ const Home = () => {
 							target="_blank"
 							border={"1px solid white"}
 							borderRadius={8}
-							p={4}
+							p={3}
 						>
 							<Flex align={"center"} gap={4}>
 								<BsLinkedin fontSize={"1.5rem"} />
