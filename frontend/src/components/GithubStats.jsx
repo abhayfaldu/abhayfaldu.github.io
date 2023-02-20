@@ -5,8 +5,8 @@ import MyGitHubCalendar from "./MyGitHubCalendar";
 const GithubStats = () => {
 	return (
 		<Center id="githubStats" py={20} flexDir="column" bgColor={"light.200"}>
-			<Heading mb={10} textAlign="center" letterSpacing={[2, 2, 10]}>
-				GitHub Calender & Statistics
+			<Heading mb={10} textAlign="center" letterSpacing={[2, 2, 2, 10]}>
+				📊 GitHub Calender & Statistics 📊
 			</Heading>
 			<Center
 				gap={16}

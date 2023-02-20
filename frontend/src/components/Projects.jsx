@@ -83,7 +83,7 @@ const Projects = () => {
 		<Center id="projects" py={20}>
 			<VStack px={4} w={["100%", "100%", "80%", "100%", "1100px"]}>
 				{/* heading */}
-				<Heading letterSpacing={10}>Projects</Heading>
+				<Heading letterSpacing={10}>💼 Projects 💼</Heading>
 				<Divider />
 				{/* projects */}
 				<VStack gap={8} pt={8}>
@@ -128,7 +128,11 @@ const Projects = () => {
 
 									{/* features */}
 									<SimpleGrid columns={2} gap={8}>
-										<Flex flexDir={"column"} gap={4}>
+										<Flex
+											flexDir={"column"}
+											gap={4}
+											pr={4}
+										>
 											<Text
 												fontSize={"1.2rem"}
 												fontWeight="700"
@@ -147,7 +151,7 @@ const Projects = () => {
 										</Flex>
 
 										{/* tech stacks */}
-										<Flex color={"43BEE5"} flexDir={"column"} gap={4}>
+										<Flex flexDir={"column"} gap={4}>
 											<Text
 												fontSize={"1.2rem"}
 												fontWeight="700"

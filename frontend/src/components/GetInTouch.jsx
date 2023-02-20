@@ -51,8 +51,8 @@ const GetInTouch = () => {
 				fontSize={[".8rem", "0.8rem", "1rem"]}
 				// overflow='hidden'
 			>
-				<Heading mb={10} letterSpacing={10}>
-					Get in touch
+				<Heading mb={10} letterSpacing={[2, 2, 2, 10]}>
+					📞 Get in touch 📞
 				</Heading>
 				<Flex
 					flexDir={["column", "row"]}
@@ -62,7 +62,7 @@ const GetInTouch = () => {
 				>
 					<Flex flexDir={"column"} gap={12} align={["center", "start"]}>
 						<Heading size={"md"} textAlign="left" color="dark">
-							Contact here
+							Contact here 👇🏻
 						</Heading>
 						<Flex
 							flexDir={"column"}
@@ -83,10 +83,7 @@ const GetInTouch = () => {
 								<Text>Jamnagar, Gujrat</Text>
 							</Flex>
 						</Flex>
-						<Flex
-							// fontSize={"2rem"}
-							gap={8}
-						>
+						<Flex gap={8}>
 							<Link href="https://twitter.com/abhayfaldu19">
 								<BsTwitter />
 							</Link>
@@ -118,7 +115,7 @@ const GetInTouch = () => {
 							textAlign={["center", "left"]}
 							color="#fff"
 						>
-							Or fill this form
+							Or fill this form 📝
 						</Heading>
 						<form ref={form} onSubmit={sendEmail} className={styles.form}>
 							<input

@@ -14,7 +14,7 @@ import React from "react";
 const About = () => {
 	return (
 		<Center id="about" flexDir={"column"} color="dark" py={20}>
-			<Heading letterSpacing={[2, 2, 10]} pb={2} pl={3}>
+			<Heading letterSpacing={[2, 2, 2, 10]} pb={2} pl={3}>
 				😁 About me 😁
 			</Heading>
 			<SimpleGrid
@@ -82,6 +82,9 @@ const About = () => {
 						<Link
 							href={"/assets/Abhay-Faldu-Resume.pdf"}
 							download
+							onClick={() =>
+								window.open("./assets/Abhay-Faldu-Resume.pdf", "_blank")
+							}
 							w={"9.5rem"}
 							textAlign="center"
 							py={2}

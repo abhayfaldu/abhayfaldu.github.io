@@ -1,5 +1,6 @@
 import { DownloadIcon } from "@chakra-ui/icons";
 import { Center, Flex, Link, Text } from "@chakra-ui/react";
+import styles from "../Styles/Navbar.module.css";
 import MenuDrawer from "./MenuDrawer";
 
 const Navbar = () => {
@@ -36,16 +37,31 @@ const Navbar = () => {
 						justify={"space-around"}
 						align={"center"}
 					>
-						<Link href="#home">Home</Link>
-						<Link href="#about">About Me</Link>
-						<Link href="#skills">Skills & Tools</Link>
-						<Link href="#githubStats">Github Stats</Link>
-						<Link href="#projects">Projects</Link>
-						<Link href="#getInTouch">Get in touch</Link>
+						<Link href="#home" className={styles.nav__link}>
+							Home
+						</Link>
+						<Link href="#about" className={styles.nav__link}>
+							About Me
+						</Link>
+						<Link href="#skills" className={styles.nav__link}>
+							Skills & Tools
+						</Link>
+						<Link href="#githubStats" className={styles.nav__link}>
+							Github Stats
+						</Link>
+						<Link href="#projects" className={styles.nav__link}>
+							Projects
+						</Link>
+						<Link href="#getInTouch" className={styles.nav__link}>
+							Get in touch
+						</Link>
 
 						<Link
 							href={"./assets/Abhay-Faldu-Resume.pdf"}
 							download
+							onClick={() =>
+								window.open("./assets/Abhay-Faldu-Resume.pdf", "_blank")
+							}
 							w={"150px"}
 							textAlign="center"
 							display={["none", "block"]}
