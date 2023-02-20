@@ -19,15 +19,6 @@ const MenuDrawer = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const btnRef = useRef();
 
-	// const linkStyle = {
-	// 	padding: "10px 0",
-	// 	borderBottom: "1px solid gray",
-	// 	_hover: {
-	// 		backgroundColor: 'lightblue',
-	// 		textDecoration: "none"
-	// 	}
-	// };
-
 	return (
 		<>
 			<HamburgerIcon

@@ -66,10 +66,8 @@ const About = () => {
 					<Flex gap={4} justify={["center", "center", "start", "start"]}>
 						<Link
 							href={"#getInTouch"}
-							target="_blank"
 							w={"9.5rem"}
 							textAlign="center"
-							// display={["none", "none", "block", "block"]}
 							py={2}
 							borderRadius={8}
 							bg="primary.main"

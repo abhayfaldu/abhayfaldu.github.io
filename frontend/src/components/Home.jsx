@@ -23,7 +23,7 @@ const Home = () => {
 					web vision to life.
 					<Flex color={"primary.main"} justify="center" mt={4} gap={4}>
 						<Link
-							href="https://twitter.com/abhayfaldu19"
+							href="https://github.com/abhayfaldu"
 							target="_blank"
 							border={"1px solid white"}
 							borderRadius={8}

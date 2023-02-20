@@ -49,7 +49,6 @@ const GetInTouch = () => {
 				className={styles.linksSection}
 				w={["100%", "100%", "100%", "900px"]}
 				fontSize={[".8rem", "0.8rem", "1rem"]}
-				// overflow='hidden'
 			>
 				<Heading mb={10} letterSpacing={[2, 2, 2, 10]}>
 					📞 Get in touch 📞
@@ -68,7 +67,6 @@ const GetInTouch = () => {
 							flexDir={"column"}
 							textAlign="left"
 							gap={8}
-							// fontSize={"1.2rem"}
 						>
 							<Flex align={"center"} gap={4}>
 								<BsFillTelephoneForwardFill />
@@ -83,7 +81,7 @@ const GetInTouch = () => {
 								<Text>Jamnagar, Gujrat</Text>
 							</Flex>
 						</Flex>
-						<Flex gap={8}>
+						<Flex gap={8} fontSize={"1.5rem"}>
 							<Link href="https://twitter.com/abhayfaldu19">
 								<BsTwitter />
 							</Link>
@@ -100,7 +98,6 @@ const GetInTouch = () => {
 						bgColor={"light.500"}
 						w={["50%", "1px"]}
 						h={["1px", "275px"]}
-						// display={["none", "flex", "flex", "flex"]}
 					></Center>
 
 					{/* form section */}
