@@ -63,11 +63,7 @@ const GetInTouch = () => {
 						<Heading size={"md"} textAlign="left" color="dark">
 							Contact here 👇🏻
 						</Heading>
-						<Flex
-							flexDir={"column"}
-							textAlign="left"
-							gap={8}
-						>
+						<Flex flexDir={"column"} textAlign="left" gap={8}>
 							<Flex align={"center"} gap={4}>
 								<BsFillTelephoneForwardFill />
 								<Text>+91 8866319970</Text>
@@ -82,13 +78,16 @@ const GetInTouch = () => {
 							</Flex>
 						</Flex>
 						<Flex gap={8} fontSize={"1.5rem"}>
-							<Link href="https://twitter.com/abhayfaldu19">
+							<Link href="https://twitter.com/abhayfaldu19" target={"_blank"}>
 								<BsTwitter />
 							</Link>
-							<Link href="https://www.linkedin.com/in/abhay-faldu-493b92211/">
+							<Link
+								href="https://www.linkedin.com/in/abhay-faldu-493b92211/"
+								target={"_blank"}
+							>
 								<BsLinkedin />
 							</Link>
-							<Link href="https://github.com/abhayfaldu">
+							<Link href="https://github.com/abhayfaldu" target={"_blank"}>
 								<BsGithub />
 							</Link>
 						</Flex>

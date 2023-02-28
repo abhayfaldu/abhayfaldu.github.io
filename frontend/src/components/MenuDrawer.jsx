@@ -85,13 +85,16 @@ const MenuDrawer = () => {
 					</DrawerBody>
 					<DrawerFooter borderTop={"1px solid lightgray"}>
 						<Flex gap={8} w={"full"} justify="center" fontSize={"1.5rem"}>
-							<Link href="https://twitter.com/abhayfaldu19">
+							<Link href="https://twitter.com/abhayfaldu19" target={"_blank"}>
 								<BsTwitter color="#1da1f2" />
 							</Link>
-							<Link href="https://www.linkedin.com/in/abhay-faldu-493b92211/">
+							<Link
+								href="https://www.linkedin.com/in/abhay-faldu-493b92211/"
+								target={"_blank"}
+							>
 								<BsLinkedin color="#0e76a8" />
 							</Link>
-							<Link href="https://github.com/abhayfaldu">
+							<Link href="https://github.com/abhayfaldu" target={"_blank"}>
 								<BsGithub color="#171515" />
 							</Link>
 						</Flex>
