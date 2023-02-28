@@ -78,10 +78,13 @@ const About = () => {
 							👇🏻 Get in touch
 						</Link>
 						<Link
-							href={"/assets/Abhay-Faldu-Resume.pdf"}
+							href={"/assets/fw19_095-Abhay-Faldu-Resume.pdf"}
 							download
 							onClick={() =>
-								window.open("./assets/Abhay-Faldu-Resume.pdf", "_blank")
+								window.open(
+									"./assets/fw19_095-Abhay-Faldu-Resume.pdf",
+									"_blank"
+								)
 							}
 							w={"9.5rem"}
 							textAlign="center"

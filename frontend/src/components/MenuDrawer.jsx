@@ -1,4 +1,4 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { DownloadIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
 	Drawer,
 	DrawerBody,
@@ -9,6 +9,7 @@ import {
 	DrawerOverlay,
 	Flex,
 	Link,
+	Text,
 	useDisclosure,
 } from "@chakra-ui/react";
 import { useRef } from "react";
@@ -56,6 +57,30 @@ const MenuDrawer = () => {
 						</Link>
 						<Link href="#getInTouch" className={styles.link} onClick={onClose}>
 							Get In Touch
+						</Link>
+						<Link
+							href={"./assets/fw19_095-Abhay-Faldu-Resume.pdf"}
+							download
+							onClick={() =>
+								window.open(
+									"./assets/fw19_095-Abhay-Faldu-Resume.pdf",
+									"_blank"
+								)
+							}
+							// w={"150px"}
+							textAlign="center"
+							display={["none", "block"]}
+							py="0.5rem"
+							mt="0.5rem"
+							borderRadius="5px"
+							bgColor="primary.main"
+							fontSize={"1rem"}
+							fontWeight={700}
+						>
+							<Flex align={"center"} gap={1} justify="center">
+								<DownloadIcon />
+								<Text>Resume</Text>
+							</Flex>
 						</Link>
 					</DrawerBody>
 					<DrawerFooter borderTop={"1px solid lightgray"}>

@@ -18,10 +18,10 @@ const GetInTouch = () => {
 
 		emailjs
 			.sendForm(
-				"service_qa67f8u",
-				"template_06eo50p",
+				process.env.REACT_APP_PORTFOLIO_EMAILJS_SERVICE_ID,
+				process.env.REACT_APP_PORTFOLIO_EMAILJS_EMAIL_TEMPLATE_ID,
 				form.current,
-				"a27mb9PHEMIetj3Jx"
+				process.env.REACT_APP_PORTFOLIO_EMAILJS_USER_ID
 			)
 			.then(
 				result => {
