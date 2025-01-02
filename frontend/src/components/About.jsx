@@ -51,17 +51,14 @@ const About = () => {
 							query={["Abhay Faldu"]}
 							styles={{ color: "primary.main" }}
 						>
-							I am Abhay Faldu an enthusiastic learner and passionate full-stack
-							web developer 🧑🏻‍💻.
+							I am Abhay Faldu, a Full-Stack Developer at Web Ledger Solutions, passionate about building scalable web applications 🧑🏻‍💻.
 						</Highlight>
 					</Text>
 					<Text
 						fontSize={["0.7rem", "0.8rem", "0.8rem", "1rem"]}
 						fontWeight="bold"
 					>
-						I am capable of building production-ready websites using MERN
-						technologies and excited to work with a great team in a great
-						organization and learn more from them.
+						I specialize in building production-ready applications using Vue.js, TypeScript, and Node.js. Currently working on financial platforms, I bring expertise in both frontend and backend development with a focus on performance and scalability.
 					</Text>
 					<Flex gap={4} justify={["center", "center", "start", "start"]}>
 						<Link

@@ -17,65 +17,56 @@ import { ImGithub } from "react-icons/im";
 
 const projectsData = [
 	{
-		name: "Cricket.com clone",
-		image: "/assets/projects/cricket-clone.png",
-		deployLink: "https://sparkly-fox-a93c3d.netlify.app",
-		githubLink:
-			"https://github.com/abhayfaldu/petite-stew-7564/tree/main/petite-stew-7564",
-		team: [false, 5],
-		features: ["scores", "cricket news", "cricket video clips"],
-		duration: 5,
-		techStacks: ["ReactJS", "Chakra UI", "CSS", "React-Slick library"],
-		description:
-			"Cricket.com is the official website of the International Cricket Council, providing the latest news, scores, live coverage and more on cricket matches and tournaments.",
-	},
-	{
-		name: "Expedia.co.in clone",
-		image: "/assets/projects/expedia-clone.png",
-		deployLink: "https://startling-douhua-da4f2c.netlify.app/",
-		githubLink: "https://github.com/sukhendu32/Expedia-clone-",
-		team: true,
-		features: ["hotel booking", "select no. of room", "select no. of persons"],
-		duration: 5,
-		techStacks: ["HTML", "CSS", "JS"],
-		AreasOfResponsibility: [
-			"builded a sign-in page",
-			"builded a sign-upn page",
-			"builded a image-gallery in single hotel page",
+		name: "DELL.COM CLONE",
+		image: "/assets/projects/dell-clone.png",
+		deployLink: "Live Source Code",
+		githubLink: "#",
+		team: [true, 4],
+		features: [
+			"Browse and purchase laptops and accessories",
+			"Product filtering and sorting",
+			"Enhanced user experience",
+			"Responsive design"
 		],
+		duration: 6,
+		techStacks: ["JavaScript", "React.js", "Redux", "Node.js", "Express.js", "MongoDB", "ChakraUI"],
 		description:
-			"Expedia.co.in is an online travel agency for booking flights, hotels and other travel services with price comparison feature.",
+			"A comprehensive e-commerce platform allowing users to browse and purchase laptops and accessories. Built with a team in 6 days, ensuring responsiveness and functionality.",
 	},
 	{
-		name: "fatSecret.com clone",
-		image: "/assets/projects/fatSecret-clone.png",
-		deployLink: "https://spectacular-mermaid-7117db.netlify.app/",
-		githubLink: "https://github.com/abhayfaldu/hard-ear-2917",
+		name: "CHANDA-KAUDI GAME",
+		image: "/assets/projects/chanda-kaudi.png",
+		deployLink: "Live Source Code",
+		githubLink: "#",
 		team: true,
-		features: ["food search", "exercise search", "search Recipes"],
-		duration: 5,
-		techStacks: ["HTML", "CSS", "JS"],
-		AreasOfResponsibility: [
-			"builded a exercise page",
-			"builded a header for all pages accept home page",
-			"builded a single exercise page",
+		features: [
+			"Real-time multiplayer gameplay",
+			"Live chat functionality",
+			"Traditional Indian board game",
+			"Intuitive gameplay"
 		],
+		duration: 2,
+		techStacks: ["TypeScript", "React.js", "Socket.io", "Node.js", "Express.js", "MongoDB", "ChakraUI"],
 		description:
-			"FatSecret.com is a platform for tracking food, exercise and weight loss progress, with features like exercise and food for fat loss.",
+			"A digital adaptation of a traditional Indian board game developed during a 2-day hackathon. Features real-time multiplayer gameplay with live chat functionality using Socket.io.",
 	},
 	{
-		name: "amazon.com clone",
-		image: "/assets/projects/amazon-clone.png",
-		deployLink:
-			"https://63be50415d805f5085fa848a--abhay-amazon-clone.netlify.app/",
-		githubLink: "https://github.com/abhayfaldu/amazon-clone",
+		name: "E-COMMERCE BACKEND",
+		image: "/assets/projects/ecommerce-backend.png",
+		deployLink: "Source Code",
+		githubLink: "#",
 		team: false,
-		features: ["products", "add-to-cart", "login", "sign-up"],
+		features: [
+			"User authentication",
+			"Product management",
+			"Order processing",
+			"Secure implementation"
+		],
 		duration: 10,
-		techStacks: ["ReactJS", "CSS", "JavaScript", "firebase"],
+		techStacks: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Bcrypt"],
 		description:
-			"Amazon-clone is a e-commerce website allows customers to purchase a wide range of products, including books, electronics, clothing, and more",
-	},
+			"A robust backend system using MVC architecture to support user authentication and product management. Implemented secure features with JWT authentication and Bcrypt for password hashing.",
+	}
 ];
 
 const Projects = () => {
