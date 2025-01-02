@@ -3,38 +3,46 @@ import React from "react";
 import Tools from "./Tools";
 
 const skills = [
+	// Primary Frontend Technologies
 	{
-		img: "/assets/skills/html-5.svg",
-		title: "HTML",
-	},
-	{
-		img: "/assets/skills/css3.svg",
-		title: "CSS",
-	},
-	{
-		img: "/assets/skills/javascript.svg",
-		title: "JavaScript",
+		img: "/assets/skills/vue.svg",
+		title: "Vue.js",
 	},
 	{
 		img: "/assets/skills/typescript.png",
 		title: "TypeScript",
 	},
 	{
-		img: "/assets/skills/mongodb.svg",
-		title: "MongoDB",
-	},
-	{
-		img: "/assets/skills/express-js.svg",
-		title: "ExpressJS",
-	},
-	{
 		img: "/assets/skills/react.svg",
-		title: "ReactJS",
+		title: "React",
+	},
+	{
+		img: "/assets/skills/javascript.svg",
+		title: "JavaScript",
+	},
+	// Primary Backend Technologies
+	{
+		img: "/assets/skills/adonis.svg",
+		title: "Adonis.js",
 	},
 	{
 		img: "/assets/skills/node-js.svg",
-		title: "NodeJS",
+		title: "Node.js",
 	},
+	{
+		img: "/assets/skills/express-js.svg",
+		title: "Express.js",
+	},
+	// Databases
+	{
+		img: "/assets/skills/mysql.svg",
+		title: "MySQL",
+	},
+	{
+		img: "/assets/skills/mongodb.svg",
+		title: "MongoDB",
+	},
+	// State Management & UI
 	{
 		img: "/assets/skills/redux.svg",
 		title: "Redux",
@@ -43,10 +51,20 @@ const skills = [
 		img: "/assets/skills/chakra-ui.svg",
 		title: "Chakra UI",
 	},
+	// Core Web Technologies
+	{
+		img: "/assets/skills/html-5.svg",
+		title: "HTML5",
+	},
+	{
+		img: "/assets/skills/css3.svg",
+		title: "CSS3",
+	},
+	// APIs & Communication
 	{
 		img: "/assets/skills/http.png",
 		title: "HTTP & REST API",
-	},
+	}
 ];
 
 const Skills = () => {
