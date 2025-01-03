@@ -1,3 +1,20 @@
+:root {
+	--navbar-height: 3.5rem;
+	--home-height: calc(100vh - var(--navbar-height));
+}
+
 .App {
 	position: relative;
+}
+
+@media (max-width: 768px) {
+	:root {
+		--navbar-height: 3rem;
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		--navbar-height: 2.5rem;
+	}
 }

@@ -18,9 +18,9 @@ import { ImGithub } from "react-icons/im";
 const projectsData = [
 	{
 		name: "DELL.COM CLONE",
-		image: "/assets/projects/dell-clone.png",
-		deployLink: "Live Source Code",
-		githubLink: "#",
+		image: "/assets/projects/dell.png",
+		deployLink: "https://lap-den.vercel.app/",
+		githubLink: "https://github.com/abhayfaldu/Dell.com_clone",
 		team: [true, 4],
 		features: [
 			"Browse and purchase laptops and accessories",
@@ -35,9 +35,9 @@ const projectsData = [
 	},
 	{
 		name: "CHANDA-KAUDI GAME",
-		image: "/assets/projects/chanda-kaudi.png",
-		deployLink: "Live Source Code",
-		githubLink: "#",
+		image: "/assets/projects/chanda_kaudi.png",
+		deployLink: "https://chanda-kaudi-game.vercel.app/",
+		githubLink: "https://github.com/abhayfaldu/Chanda_kaudi_game",
 		team: true,
 		features: [
 			"Real-time multiplayer gameplay",
@@ -52,9 +52,9 @@ const projectsData = [
 	},
 	{
 		name: "E-COMMERCE BACKEND",
-		image: "/assets/projects/ecommerce-backend.png",
-		deployLink: "Source Code",
-		githubLink: "#",
+		image: "/assets/projects/shopzon_backend.webp",
+		deployLink: "",
+		githubLink: "https://github.com/abhayfaldu/shopzon-backend",
 		team: false,
 		features: [
 			"User authentication",
@@ -184,23 +184,25 @@ const Projects = () => {
 
 									{/* action buttons */}
 									<Flex gap={8}>
-										<Link
-											href={project.deployLink}
-											target="_blank"
-											w={"9.5rem"}
-											py={2}
-											mt={2}
-											bg="primary.main"
-											textAlign="center"
-											borderRadius={"5px"}
-											fontSize={"1rem"}
-											fontWeight={700}
-										>
-											<Flex align={"center"} gap={1} justify="center">
-												<ExternalLinkIcon />
-												<Text>Deployed Link</Text>
-											</Flex>
-										</Link>
+										{project.deployLink && (
+											<Link
+												href={project.deployLink}
+												target="_blank"
+												w={"9.5rem"}
+												py={2}
+												mt={2}
+												bg="primary.main"
+												textAlign="center"
+												borderRadius={"5px"}
+												fontSize={"1rem"}
+												fontWeight={700}
+											>
+												<Flex align={"center"} gap={1} justify="center">
+													<ExternalLinkIcon />
+													<Text>Deployed Link</Text>
+												</Flex>
+											</Link>
+										)}
 										<Link
 											href={project.githubLink}
 											target="_blank"

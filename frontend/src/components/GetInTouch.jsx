@@ -1,6 +1,6 @@
-import { Box, Center, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Link, useToast } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
 	BsFillTelephoneForwardFill,
 	BsGithub,
@@ -12,30 +12,47 @@ import styles from "../Styles/GetInTouch.module.css";
 
 const GetInTouch = () => {
 	const form = useRef();
+	const toast = useToast();
+	const [isLoading, setIsLoading] = useState(false);
 
-	const sendEmail = e => {
+	emailjs.init(process.env.REACT_APP_PORTFOLIO_EMAILJS_PUBLIC_KEY);
+
+	const sendEmail = async (e) => {
 		e.preventDefault();
+		setIsLoading(true);
 
-		emailjs
-			.sendForm(
+		try {
+			const result = await emailjs.sendForm(
 				process.env.REACT_APP_PORTFOLIO_EMAILJS_SERVICE_ID,
 				process.env.REACT_APP_PORTFOLIO_EMAILJS_EMAIL_TEMPLATE_ID,
-				form.current,
-				process.env.REACT_APP_PORTFOLIO_EMAILJS_USER_ID
-			)
-			.then(
-				result => {
-					console.log(result.text);
-					e.target.reset();
-					window.alert("massage sent successfully");
-				},
-				error => {
-					console.log(error.text);
-					window.alert("massage sent successfully");
-				}
+				form.current
 			);
-	};
 
+			if (result.status === 200) {
+				toast({
+					title: "Success",
+					description: "Message sent successfully",
+					status: "success",
+					duration: 3000,
+					isClosable: true,
+					position: "top-right"
+				});
+				form.current.reset();
+			}
+		} catch (error) {
+			console.error("EmailJS Error:", error);
+			toast({
+				title: "Error",
+				description: "Failed to send message. Please try again.",
+				status: "error",
+				duration: 3000,
+				isClosable: true,
+				position: "top-right"
+			});
+		} finally {
+			setIsLoading(false);
+		}
+	};
 	return (
 		<Center
 			id="getInTouch"
@@ -66,19 +83,19 @@ const GetInTouch = () => {
 						<Flex flexDir={"column"} textAlign="left" gap={8}>
 							<Flex align={"center"} gap={4}>
 								<BsFillTelephoneForwardFill />
-								<Text>+91 8866319970</Text>
+								<Link href="tel:+918866319970">+91 8866319970</Link>
 							</Flex>
 							<Flex align={"center"} gap={4}>
 								<MdEmail />
-								<Text>abhayfaldu1922@gmail.com</Text>
+								<Link href="mailto:abhayfaldu1922@gmail.com">abhayfaldu1922@gmail.com</Link>
 							</Flex>
 							<Flex align={"center"} gap={4}>
 								<MdLocationPin />
-								<Text>Jamnagar, Gujrat</Text>
+								<Link href="https://maps.app.goo.gl/cz7bqczAHeHC6d1Z6" target="_blank">Jamnagar, Gujrat</Link>
 							</Flex>
 						</Flex>
 						<Flex gap={8} fontSize={"1.5rem"}>
-							<Link href="https://twitter.com/abhayfaldu19" target={"_blank"}>
+							<Link href="https://twitter.com/abhaystwt" target={"_blank"}>
 								<BsTwitter />
 							</Link>
 							<Link
@@ -119,20 +136,28 @@ const GetInTouch = () => {
 								name="user_name"
 								placeholder="Enter your name"
 								required
+								disabled={isLoading}
 							/>
 							<input
 								type="email"
 								name="user_email"
 								placeholder="Enter your email"
 								required
+								disabled={isLoading}
 							/>
 							<textarea
 								rows="1"
 								name="message"
 								placeholder="Enter message"
 								required
+								disabled={isLoading}
 							/>
-							<input type="submit" value="Send" />
+							<input
+								type="submit"
+								value={isLoading ? "Sending..." : "Send"}
+								disabled={isLoading}
+								style={{ cursor: isLoading ? "not-allowed" : "pointer" }}
+							/>
 						</form>
 					</Center>
 				</Flex>

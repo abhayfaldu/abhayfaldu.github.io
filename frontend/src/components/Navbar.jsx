@@ -7,7 +7,7 @@ const Navbar = () => {
 	return (
 		<>
 			<Center
-				h={["2.5rem", "3rem", "3.5rem", "3.5rem"]}
+				h={"var(--navbar-height)"}
 				zIndex={"100"}
 				position={"sticky"}
 				bgColor={"primary.main"}

@@ -4,7 +4,7 @@ import styles from "../Styles/Home.module.css";
 
 const Home = () => {
 	return (
-		<Center id="home" className={styles.home__container} position={"relative"}>
+		<Center id="home" className={styles.home__container} position={"relative"} h={"var(--home-height)"}>
 			<Box className={styles.home__textWrapper}>
 				<Text
 					className={styles.home__text}
