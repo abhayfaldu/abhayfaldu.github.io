@@ -1,37 +1,102 @@
-import { Center, Flex, Heading, Img, Link } from "@chakra-ui/react";
 import React from "react";
+import { motion } from "framer-motion";
+import { cn } from "../utils/cn";
+import { WavyBackground } from "./ui/wavy-background";
+import { SparklesCore } from "./ui/sparkles";
 import MyGitHubCalendar from "./MyGitHubCalendar";
 
 const GithubStats = () => {
 	return (
-		<Center id="githubStats" py={20} flexDir="column" bgColor={"light.200"}>
-			<Heading mb={10} textAlign="center" letterSpacing={[2, 2, 2, 10]}>
-				📊 GitHub Calender & Statistics 📊
-			</Heading>
-			<Center
-				gap={16}
-				flexDir={"column"}
-				px={4}
-				w={["90%", "90%", "90%", "90%", "1100px"]}
-			>
-				<Link href="https://github.com/abhayfaldu" target="_blank">
-					<MyGitHubCalendar />
-				</Link>
-				<Flex
-					gap={8}
-					flexDir={["column", "column", "row"]}
-					w={["100%", "75%", "auto"]}
-					align="center"
-				>
-					<Link href="https://github.com/abhayfaldu" target="_blank">
-						<Img src="https://github-readme-streak-stats.herokuapp.com?user=abhayfaldu&theme=default&border_radius=8&color=#43BEE5" />
-					</Link>
-					<Link href="https://github.com/abhayfaldu" target="_blank">
-						<Img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=abhayfaldu&show_icons=true&theme=light&border_radius=8" />
-					</Link>
-				</Flex>
-			</Center>
-		</Center>
+		<div id="githubStats" className="relative min-h-screen w-full bg-black">
+			<WavyBackground className="w-full h-full" speed="slow">
+				<SparklesCore
+					background="transparent"
+					minSize={0.4}
+					maxSize={1}
+					particleDensity={0.5}
+					className="w-full h-full"
+					particleColor="#FFFFFF"
+				/>
+				<div className="relative w-full py-20">
+					<div className="mx-auto max-w-7xl px-4">
+						{/* Section Title */}
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							viewport={{ once: true }}
+							className="text-center space-y-4 mb-16"
+						>
+							<h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+								GitHub Activity
+							</h2>
+							<div className="h-1 w-20 bg-gradient-to-r from-purple-500/50 to-transparent mx-auto" />
+						</motion.div>
+
+						{/* GitHub Calendar */}
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, delay: 0.2 }}
+							viewport={{ once: true }}
+							className="space-y-8"
+						>
+							<div className="relative p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50">
+								<a
+									href="https://github.com/abhayfaldu"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="block hover:opacity-80 transition-opacity"
+								>
+									<MyGitHubCalendar />
+								</a>
+							</div>
+						</motion.div>
+
+						{/* GitHub Stats Cards */}
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, delay: 0.4 }}
+							viewport={{ once: true }}
+							className="grid md:grid-cols-2 gap-6 mt-12"
+						>
+							{/* Streak Stats */}
+							<a
+								href="https://github.com/abhayfaldu"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="block group"
+							>
+								<div className="relative p-2 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden group-hover:border-neutral-500 transition-colors">
+									<img
+										src="https://github-readme-streak-stats.herokuapp.com?user=abhayfaldu&theme=dark&hide_border=true&background=00000000&stroke=6366F1&ring=6366F1&fire=6366F1&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=94A3B8"
+										alt="GitHub Streak Stats"
+										className="w-full"
+									/>
+								</div>
+							</a>
+
+							{/* GitHub Stats */}
+							<a
+								href="https://github.com/abhayfaldu"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="block group"
+							>
+								<div className="relative p-2 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden group-hover:border-neutral-500 transition-colors">
+									<img
+										src="https://github-readme-stats.vercel.app/api?username=abhayfaldu&show_icons=true&hide_border=true&theme=dark&bg_color=00000000&title_color=FFFFFF&text_color=FFFFFF&icon_color=6366F1"
+										alt="GitHub Stats"
+										className="w-full"
+									/>
+								</div>
+							</a>
+						</motion.div>
+					</div>
+				</div>
+			</WavyBackground>
+		</div>
 	);
 };
 

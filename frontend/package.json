@@ -12,15 +12,18 @@
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^13.5.0",
-		"framer-motion": "^7.6.1",
+		"clsx": "^2.1.1",
+		"framer-motion": "^11.15.0",
 		"github-calendar": "^2.3.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-github-calendar": "^3.4.0",
+		"react-hot-toast": "^2.5.1",
 		"react-icons": "^4.6.0",
 		"react-router-dom": "^6.4.2",
 		"react-scripts": "5.0.1",
 		"react-tooltip": "4.4.2",
+		"tailwind-merge": "^2.6.0",
 		"typewriter-effect": "^2.19.0",
 		"web-vitals": "^2.1.4",
 		"yarn": "^1.22.19"
@@ -31,7 +34,9 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"predeploy": "yarn run build",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build",
+		"format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+		"format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
 	},
 	"eslintConfig": {
 		"extends": [
@@ -52,6 +57,7 @@
 		]
 	},
 	"devDependencies": {
-		"gh-pages": "^4.0.0"
+		"gh-pages": "^4.0.0",
+		"prettier": "^3.4.2"
 	}
 }

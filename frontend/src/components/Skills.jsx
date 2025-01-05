@@ -1,114 +1,175 @@
-import { Center, Heading, Img, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
-import Tools from "./Tools";
+import { motion } from "framer-motion";
+import { cn } from "../utils/cn";
+import { GradientBorderButton } from "./ui/gradient-border-button";
+import { HiExternalLink } from "react-icons/hi";
 
-const skills = [
-	// Primary Frontend Technologies
-	{
-		img: "/assets/skills/vue.svg",
-		title: "Vue.js",
-	},
-	{
-		img: "/assets/skills/typescript.png",
-		title: "TypeScript",
-	},
-	{
-		img: "/assets/skills/react.svg",
-		title: "React",
-	},
-	{
-		img: "/assets/skills/javascript.svg",
-		title: "JavaScript",
-	},
-	// Primary Backend Technologies
-	{
-		img: "/assets/skills/adonis.svg",
-		title: "Adonis.js",
-	},
-	{
-		img: "/assets/skills/node-js.svg",
-		title: "Node.js",
-	},
-	{
-		img: "/assets/skills/express-js.svg",
-		title: "Express.js",
-	},
-	// Databases
-	{
-		img: "/assets/skills/mysql.svg",
-		title: "MySQL",
-	},
-	{
-		img: "/assets/skills/mongodb.svg",
-		title: "MongoDB",
-	},
-	// State Management & UI
-	{
-		img: "/assets/skills/redux.svg",
-		title: "Redux",
-	},
-	{
-		img: "/assets/skills/chakra-ui.svg",
-		title: "Chakra UI",
-	},
-	// Core Web Technologies
-	{
-		img: "/assets/skills/html-5.svg",
-		title: "HTML5",
-	},
-	{
-		img: "/assets/skills/css3.svg",
-		title: "CSS3",
-	},
-	// APIs & Communication
-	{
-		img: "/assets/skills/http.png",
-		title: "HTTP & REST API",
-	}
-];
+const skillsData = {
+	frontend: [
+		{
+			name: "Vue.js",
+			icon: "/assets/skills/vue.svg",
+		},
+		{
+			name: "TypeScript",
+			icon: "/assets/skills/typescript.png",
+		},
+		{
+			name: "React",
+			icon: "/assets/skills/react.svg",
+		},
+		{
+			name: "JavaScript",
+			icon: "/assets/skills/javascript.svg",
+		},
+		{
+			name: "Adonis.js",
+			icon: "/assets/skills/adonis.svg",
+		},
+		{
+			name: "Node.js",
+			icon: "/assets/skills/node-js.svg",
+		},
+		{
+			name: "Express.js",
+			icon: "/assets/skills/express-js.svg",
+		},
+		{
+			name: "MySQL",
+			icon: "/assets/skills/mysql.svg",
+		},
+		{
+			name: "MongoDB",
+			icon: "/assets/skills/mongodb.svg",
+		},
+		{
+			name: "Redux",
+			icon: "/assets/skills/redux.svg",
+		},
+		{
+			name: "Chakra UI",
+			icon: "/assets/skills/chakra-ui.svg",
+		},
+		{
+			name: "HTML5",
+			icon: "/assets/skills/html-5.svg",
+		},
+		{
+			name: "CSS3",
+			icon: "/assets/skills/css3.svg",
+		},
+		{
+			name: "HTTP & REST API",
+			icon: "/assets/skills/http.png",
+		},
+	],
+	tools: [
+		{
+			name: "VS Code",
+			icon: "/assets/tools/vs-code.svg",
+		},
+		{
+			name: "Git",
+			icon: "/assets/tools/git.svg",
+		},
+		{
+			name: "GitHub",
+			icon: "/assets/tools/github.svg",
+		},
+		{
+			name: "Postman",
+			icon: "/assets/tools/postman.png",
+		},
+	],
+};
 
 const Skills = () => {
 	return (
-		<>
-			<Center id="skills" pt={20} pb={10} flexDir="column" bg={"primary.main"}>
-				<Heading letterSpacing={10}>🚀 Skills 🚀</Heading>
-				<SimpleGrid
-					mx={"auto"}
-					w={["80%", "90%", "100%", "85%", "1000px"]}
-					px={4}
-					py={[8, 0]}
-					columns={[2, 3, 4, 5]}
-					gap={[0, 3, 4]}
-					mt={[5, 5, 10]}
-					fontSize={["1rem", "1rem", "1.2rem"]}
-					textAlign="center"
-					bgColor={["light.main", "transparent"]}
-					borderRadius={["0.5rem"]}
-				>
-					{skills.length > 0 &&
-						skills.map((skill, index) => (
-							<Center
-								boxSizing="border-box"
-								flexDir={"column"}
-								bg="light.main"
-								p={[3, 3, 4]}
-								key={index}
-								borderRadius={[0, "0.5rem"]}
-								boxShadow={[0, "md"]}
+		<div id="skills" className="relative min-h-screen w-full bg-black py-20">
+			<div className="relative w-full">
+				<div className="mx-auto max-w-7xl px-4">
+					{/* Section Title */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8 }}
+						viewport={{ once: true }}
+						className="text-center space-y-4 mb-16"
+					>
+						<h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+							Skills & Technologies
+						</h2>
+						<div className="h-1 w-20 bg-gradient-to-r from-purple-500/50 to-transparent mx-auto" />
+					</motion.div>
+
+					{/* Skills Grid */}
+					<div className="grid gap-12">
+						{Object.entries(skillsData).map(([category, skills], index) => (
+							<motion.div
+								key={category}
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.8, delay: index * 0.2 }}
+								viewport={{ once: true }}
+								className="space-y-6"
 							>
-								<Img
-									src={skill.img}
-									mb={[3, 2, 4]}
-									alt="skill-icon"
-									width={["70px", "100px", "100px"]}
-								/>
-								<Text>{skill.title}</Text>
-							</Center>
+								<h3 className="text-2xl font-bold text-neutral-200 capitalize">{category}</h3>
+								<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+									{skills.map((skill) => (
+										<div
+											key={skill.name}
+											className={cn(
+												"group relative p-4 rounded-xl",
+												"bg-neutral-900/50 backdrop-blur-sm",
+												"border border-neutral-700/50",
+												"hover:border-neutral-500 transition-colors duration-300"
+											)}
+										>
+											<div className="aspect-square mb-3 flex items-center justify-center">
+												<img
+													src={skill.icon}
+													alt={skill.name}
+													className={cn(
+														"object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-300",
+														(skill.name === "TypeScript" || 
+														skill.name === "Express.js" || 
+														skill.name === "MySQL" || 
+														skill.name === "MongoDB" || 
+														skill.name === "HTTP & REST API" || 
+														skill.name === "Postman")
+															? "w-[90px] h-[90px]"
+															: "w-[100px] h-[100px]"
+													)}
+												/>
+											</div>
+											<div className="text-center">
+												<h4 className="text-sm font-medium text-neutral-300 group-hover:text-white transition-colors">
+													{skill.name}
+												</h4>
+											</div>
+										</div>
+									))}
+								</div>
+							</motion.div>
 						))}
-				</SimpleGrid>
-			</Center>
-			<Tools />
-		</>
+					</div>
+
+					{/* Action Button */}
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.6 }}
+						viewport={{ once: true }}
+						className="flex justify-center mt-12"
+					>
+						<GradientBorderButton href="https://github.com/abhayfaldu?tab=repositories" external>
+							<HiExternalLink className="mr-2 h-5 w-5 inline-block" />
+							View My Work
+						</GradientBorderButton>
+					</motion.div>
+				</div>
+			</div>
+		</div>
 	);
 };
 

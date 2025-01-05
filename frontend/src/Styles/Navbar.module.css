@@ -1,9 +1,9 @@
 .nav__link {
-  font-size: 1.1rem;
+	font-size: 1.1rem;
 	text-decoration: none;
 }
 
 .nav__link:hover {
 	color: white;
-  text-decoration: none;
+	text-decoration: none;
 }

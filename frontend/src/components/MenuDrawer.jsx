@@ -22,12 +22,7 @@ const MenuDrawer = () => {
 
 	return (
 		<>
-			<HamburgerIcon
-				w={6}
-				h={6}
-				onClick={onOpen}
-				display={["block", "block", "block", "none"]}
-			/>
+			<HamburgerIcon w={6} h={6} onClick={onOpen} display={["block", "block", "block", "none"]} />
 			<Drawer
 				isOpen={isOpen}
 				placement="right"
@@ -61,12 +56,7 @@ const MenuDrawer = () => {
 						<Link
 							href={"./assets/fw19_095-Abhay-Faldu-Resume.pdf"}
 							download
-							onClick={() =>
-								window.open(
-									"./assets/fw19_095-Abhay-Faldu-Resume.pdf",
-									"_blank"
-								)
-							}
+							onClick={() => window.open("./assets/fw19_095-Abhay-Faldu-Resume.pdf", "_blank")}
 							// w={"150px"}
 							textAlign="center"
 							display={["none", "block"]}
@@ -88,10 +78,7 @@ const MenuDrawer = () => {
 							<Link href="https://twitter.com/abhayfaldu19" target={"_blank"}>
 								<BsTwitter color="#1da1f2" />
 							</Link>
-							<Link
-								href="https://www.linkedin.com/in/abhay-faldu-493b92211/"
-								target={"_blank"}
-							>
+							<Link href="https://www.linkedin.com/in/abhay-faldu-493b92211/" target={"_blank"}>
 								<BsLinkedin color="#0e76a8" />
 							</Link>
 							<Link href="https://github.com/abhayfaldu" target={"_blank"}>

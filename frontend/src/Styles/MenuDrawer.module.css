@@ -1,9 +1,9 @@
 .link {
-  padding: 14px 0;
-  border-bottom: 1px solid lightgray;
+	padding: 14px 0;
+	border-bottom: 1px solid lightgray;
 }
 
 .link:hover {
-  text-decoration: none;
-  color: #43BEE5;
+	text-decoration: none;
+	color: #43bee5;
 }

@@ -11,7 +11,7 @@ import Skills from "./components/Skills";
 
 function App() {
 	return (
-		<SimpleGrid className="App" >
+		<SimpleGrid className="App">
 			<Navbar />
 			<Home />
 			<About />
