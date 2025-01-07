@@ -66,7 +66,7 @@ const projectsData = [
 
 const Projects = () => {
 	return (
-		<div id="projects" className="relative w-full bg-black py-24">
+		<div id="projects" className="relative w-full bg-black py-24 pt-32">
 			{/* Content Container */}
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">
@@ -85,7 +85,7 @@ const Projects = () => {
 					</motion.div>
 
 					{/* Projects Grid */}
-					<div className="space-y-24">
+					<div className="space-y-32">
 						{projectsData.map((project, index) => (
 							<motion.div
 								key={project.name}

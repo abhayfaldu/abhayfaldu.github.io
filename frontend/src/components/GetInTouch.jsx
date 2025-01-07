@@ -35,7 +35,7 @@ const GetInTouch = () => {
 	};
 
 	return (
-		<div id="contact" className="relative w-full bg-black py-24">
+		<div id="contact" className="relative w-full bg-black py-24 pt-32">
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">
 					{/* Section Title */}
@@ -94,7 +94,14 @@ const GetInTouch = () => {
 									<div className="h-12 w-12 rounded-lg bg-neutral-900/50 backdrop-blur-sm flex items-center justify-center border border-neutral-700/50">
 										<IoLocationSharp className="h-6 w-6" />
 									</div>
-									<span>Jamnagar, Gujarat</span>
+									<a
+										href="https://maps.app.goo.gl/cz7bqczAHeHC6d1Z6"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="hover:text-white transition-colors"
+									>
+										Jamnagar, Gujarat
+									</a>
 								</div>
 							</div>
 

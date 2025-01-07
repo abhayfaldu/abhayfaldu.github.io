@@ -6,7 +6,8 @@ import { HiExternalLink } from "react-icons/hi";
 
 const About = () => {
 	return (
-		<div id="about" className="relative w-full bg-black py-24">
+		<div id="about" className="relative w-full bg-black py-24 pt-32
+		">
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">
 					{/* Section Title */}
@@ -73,12 +74,13 @@ const About = () => {
 										"JavaScript",
 										"TypeScript",
 										"React.js",
+										"Vue.js",
 										"Node.js",
 										"Express.js",
+										"AdonisJS",
 										"MongoDB",
 										"SQL",
 										"Git",
-										"AWS",
 									].map((skill) => (
 										<span
 											key={skill}

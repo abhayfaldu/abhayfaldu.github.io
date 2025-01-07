@@ -85,7 +85,7 @@ const skillsData = {
 
 const Skills = () => {
 	return (
-		<div id="skills" className="relative w-full bg-black py-24">
+		<div id="skills" className="relative w-full bg-black py-24 pt-32">
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">
 					{/* Section Title */}

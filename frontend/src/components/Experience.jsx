@@ -70,7 +70,7 @@ const Experience = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}
 					viewport={{ once: true }}
-					className="text-center space-y-4 py-24"
+					className="text-center space-y-4 pt-32"
 				>
 					<h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
 						Professional Experience
