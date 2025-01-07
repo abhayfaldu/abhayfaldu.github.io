@@ -48,6 +48,8 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "grid-point": "grid-point 20s linear infinite",
         border: "border 8s linear infinite",
+        "spin-slow": "spin 5s linear infinite",
+        "spin-slower": "spin 8s linear infinite",
       },
       backgroundImage: {
         'grid-white': "linear-gradient(to right, rgb(255 255 255 / 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.1) 1px, transparent 1px)",

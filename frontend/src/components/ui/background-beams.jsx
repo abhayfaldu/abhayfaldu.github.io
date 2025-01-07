@@ -1,57 +1,33 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { cn } from "../../utils/cn";
+import React from "react";
 
-export const BackgroundBeams = () => {
-	const ref = useRef(null);
-	const controls = useAnimation();
-
-	useEffect(() => {
-		if (!ref.current) return;
-
-		const animate = async () => {
-			await controls.start({
-				opacity: 1,
-				scale: 1,
-				transition: {
-					duration: 1.5,
-					ease: "easeOut",
-				},
-			});
-		};
-
-		animate();
-	}, [controls]);
-
+export const BackgroundBeams = ({ className }) => {
 	return (
-		<div
-			ref={ref}
-			className="absolute inset-0 overflow-hidden"
-			style={{
-				transform: "translateZ(0)",
-				background: "radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 100%)",
-			}}
-		>
-			<motion.div
-				initial={{ opacity: 0, scale: 0.8 }}
-				animate={controls}
-				className="absolute inset-0"
-				style={{
-					background: `
-            radial-gradient(circle at 20% 20%, rgba(99, 179, 237, 0.15) 0%, transparent 40%),
-            radial-gradient(circle at 80% 80%, rgba(99, 179, 237, 0.15) 0%, transparent 40%),
-            radial-gradient(circle at 50% 50%, rgba(99, 179, 237, 0.1) 0%, transparent 60%)
-          `,
-					transform: "translateZ(0)",
-				}}
-			/>
-			<div
-				className="absolute inset-0"
-				style={{
-					backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.03' fill-rule='evenodd'%3E%3Ccircle cx='50' cy='50' r='3'/%3E%3C/g%3E%3C/svg%3E")`,
-					opacity: 0.1,
-				}}
-			/>
+		<div className={cn("absolute inset-0 overflow-hidden", className)}>
+			<div className="h-full w-full relative">
+				{/* Dark background */}
+				<div className="absolute inset-0 bg-black" />
+
+				{/* Beam container */}
+				<div className="absolute inset-0 flex items-center justify-center">
+					<div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]">
+						{/* Beams */}
+						<div className="absolute h-[40rem] w-[40rem] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 blur-[100px]" />
+						<div className="absolute h-[40rem] w-[40rem] animate-spin-slower bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 blur-[100px]" />
+						<div className="absolute h-[40rem] w-[40rem] animate-spin-slow bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 blur-[100px]" />
+					</div>
+				</div>
+
+				{/* Noise texture */}
+				<div className="absolute inset-0 opacity-[0.15]">
+					<div className="absolute inset-0 bg-[radial-gradient(#ffffff15_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)]" />
+				</div>
+
+				{/* Vignette */}
+				<div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-50" />
+				<div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-50" />
+			</div>
 		</div>
 	);
 };

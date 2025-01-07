@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "../utils/cn";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { WavyBackground } from "./ui/wavy-background";
+import { BackgroundBeams } from "./ui/background-beams";
 import { SparklesCore } from "./ui/sparkles";
 import { GradientBorderButton } from "./ui/gradient-border-button";
 
@@ -10,16 +10,16 @@ const Home = () => {
 	return (
 		<div id="home" className="relative h-screen w-full overflow-hidden bg-black">
 			{/* Background Effects */}
-			<WavyBackground className="w-full h-full">
-				<SparklesCore
-					background="transparent"
-					minSize={0.4}
-					maxSize={1}
-					particleDensity={1.2}
-					className="w-full h-full"
-					particleColor="#FFFFFF"
-				/>
-			</WavyBackground>
+			<BackgroundBeams className="opacity-40" />
+			<SparklesCore
+				id="tsparticlesfullpage"
+				background="transparent"
+				minSize={0.6}
+				maxSize={1.4}
+				particleDensity={100}
+				className="w-full h-full"
+				particleColor="#FFFFFF"
+			/>
 
 			{/* Content Container */}
 			<div className="absolute inset-0 w-full h-full">

@@ -7,6 +7,10 @@ const links = [
 		href: "#about",
 	},
 	{
+		name: "Experience",
+		href: "#experience",
+	},
+	{
 		name: "Projects",
 		href: "#projects",
 	},
@@ -20,7 +24,7 @@ const links = [
 	},
 ];
 
-export const NavbarMenu = () => {
+const NavbarMenu = () => {
 	return (
 		<nav className="fixed top-0 inset-x-0 h-16 bg-black/50 backdrop-blur-xl z-50">
 			<div className="mx-auto max-w-[60rem] h-full px-4">
@@ -63,3 +67,5 @@ export const NavbarMenu = () => {
 		</nav>
 	);
 };
+
+export default NavbarMenu;

@@ -1,5 +1,5 @@
 import { cn } from "../../utils/cn";
-import React from "react";
+import React, { useState } from "react";
 
 export const WavyBackground = ({
 	children,
@@ -14,7 +14,7 @@ export const WavyBackground = ({
 		slow: "20s",
 		fast: "10s",
 	};
-	const [shouldAnimate, setShouldAnimate] = React.useState(animate);
+	const [shouldAnimate] = useState(true);
 
 	return (
 		<div

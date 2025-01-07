@@ -1,23 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "../utils/cn";
 import { WavyBackground } from "./ui/wavy-background";
 import { SparklesCore } from "./ui/sparkles";
 import MyGitHubCalendar from "./MyGitHubCalendar";
 
 const GithubStats = () => {
 	return (
-		<div id="githubStats" className="relative min-h-screen w-full bg-black">
+		<div id="githubStats" className="relative w-full bg-black">
 			<WavyBackground className="w-full h-full" speed="slow">
 				<SparklesCore
 					background="transparent"
-					minSize={0.4}
-					maxSize={1}
-					particleDensity={0.5}
-					className="w-full h-full"
-					particleColor="#FFFFFF"
+						minSize={0.4}
+						maxSize={1}
+						particleDensity={0.5}
+						className="w-full h-full"
+						particleColor="#FFFFFF"
 				/>
-				<div className="relative w-full py-20">
+				<div className="relative w-full py-24">
 					<div className="mx-auto max-w-7xl px-4">
 						{/* Section Title */}
 						<motion.div

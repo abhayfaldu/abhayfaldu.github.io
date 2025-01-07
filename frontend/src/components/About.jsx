@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "../utils/cn";
 import { GradientBorderButton } from "./ui/gradient-border-button";
 import { BsGithub } from "react-icons/bs";
 import { HiExternalLink } from "react-icons/hi";
 
 const About = () => {
 	return (
-		<div id="about" className="relative min-h-screen w-full bg-black py-20">
+		<div id="about" className="relative w-full bg-black py-24">
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">
 					{/* Section Title */}

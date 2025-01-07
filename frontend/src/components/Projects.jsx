@@ -66,7 +66,7 @@ const projectsData = [
 
 const Projects = () => {
 	return (
-		<div id="projects" className="relative min-h-screen w-full bg-black py-20">
+		<div id="projects" className="relative w-full bg-black py-24">
 			{/* Content Container */}
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">

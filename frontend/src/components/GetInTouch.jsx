@@ -35,7 +35,7 @@ const GetInTouch = () => {
 	};
 
 	return (
-		<div id="contact" className="relative min-h-screen w-full bg-black py-20">
+		<div id="contact" className="relative w-full bg-black py-24">
 			<div className="relative w-full">
 				<div className="mx-auto max-w-7xl px-4">
 					{/* Section Title */}
