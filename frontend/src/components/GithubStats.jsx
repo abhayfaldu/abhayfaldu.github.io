@@ -10,14 +10,14 @@ const GithubStats = () => {
 			<WavyBackground className="w-full h-full" speed="slow">
 				<SparklesCore
 					background="transparent"
-						minSize={0.4}
-						maxSize={1}
-						particleDensity={0.5}
-						className="w-full h-full"
-						particleColor="#FFFFFF"
+					minSize={0.4}
+					maxSize={1}
+					particleDensity={0.5}
+					className="w-full h-full"
+					particleColor="#FFFFFF"
 				/>
 				<div className="relative w-full py-24">
-					<div className="mx-auto max-w-7xl px-4">
+					<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 						{/* Section Title */}
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const GithubStats = () => {
 							viewport={{ once: true }}
 							className="space-y-8"
 						>
-							<div className="relative p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50">
+							<div className="relative p-4 pl-12 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden">
 								<a
 									href="https://github.com/abhayfaldu"
 									target="_blank"
@@ -58,20 +58,20 @@ const GithubStats = () => {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8, delay: 0.4 }}
 							viewport={{ once: true }}
-							className="grid md:grid-cols-2 gap-6 mt-12"
+							className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
 						>
 							{/* Streak Stats */}
 							<a
 								href="https://github.com/abhayfaldu"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block group"
+								className="block group h-full"
 							>
-								<div className="relative p-2 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden group-hover:border-neutral-500 transition-colors">
+								<div className="relative p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden group-hover:border-neutral-500 transition-colors h-full flex items-center justify-center">
 									<img
 										src="https://github-readme-streak-stats.herokuapp.com?user=abhayfaldu&theme=dark&hide_border=true&background=00000000&stroke=6366F1&ring=6366F1&fire=6366F1&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=FFFFFF&sideLabels=FFFFFF&dates=94A3B8"
 										alt="GitHub Streak Stats"
-										className="w-full"
+										className="w-full max-w-full h-auto"
 									/>
 								</div>
 							</a>
@@ -81,13 +81,13 @@ const GithubStats = () => {
 								href="https://github.com/abhayfaldu"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block group"
+								className="block group h-full"
 							>
-								<div className="relative p-2 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden group-hover:border-neutral-500 transition-colors">
+								<div className="relative p-4 rounded-xl bg-neutral-900/50 backdrop-blur-sm border border-neutral-700/50 overflow-hidden group-hover:border-neutral-500 transition-colors h-full flex items-center justify-center">
 									<img
 										src="https://github-readme-stats.vercel.app/api?username=abhayfaldu&show_icons=true&hide_border=true&theme=dark&bg_color=00000000&title_color=FFFFFF&text_color=FFFFFF&icon_color=6366F1"
 										alt="GitHub Stats"
-										className="w-full"
+										className="w-full max-w-full h-auto"
 									/>
 								</div>
 							</a>

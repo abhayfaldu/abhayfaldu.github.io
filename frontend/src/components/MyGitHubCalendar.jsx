@@ -10,8 +10,10 @@ const MyGitHubCalendar = () => {
 			blockRadius={5}
 			blockSize={20}
 			boxColor={"#555"}
-			color={"#00c3ff"}
+			color={"#6366F1"}
 			showWeekdayLabels={1}
+			hideColor={true}
+			style={{ color: "#FFFFFF" }}
 		>
 			<ReactTooltip delayShow={20} html />
 		</GitHubCalendar>
