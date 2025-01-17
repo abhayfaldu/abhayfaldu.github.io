@@ -2,6 +2,7 @@ import { SimpleGrid } from "@chakra-ui/react";
 import "./App.css";
 import About from "./components/About";
 import Contact from "./components/GetInTouch";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import GithubStats from "./components/GithubStats";
 import Home from "./components/Home";
@@ -15,6 +16,7 @@ function App() {
 			<Navbar />
 			<Home />
 			<About />
+			<Experience />
 			<Skills />
 			<GithubStats />
 			<Projects />
