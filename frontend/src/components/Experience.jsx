@@ -5,8 +5,6 @@ import { Timeline } from "./ui/timeline";
 const experienceData = [
 	{
 		title: "2023",
-		mobileTitle: "Early 2023",
-		description: "Started my journey as a Full Stack Developer at Web Ledger Solutions.",
 		content: (
 			<div className="group relative p-4 sm:p-8 bg-neutral-900/50 backdrop-blur-sm rounded-2xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
 				<div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -22,7 +20,7 @@ const experienceData = [
 							</span>
 						</div>
 						<p className="text-neutral-400 text-sm sm:text-[15px] font-medium">
-							Full-Stack Developer | March 2023 - Present | Bangalore, India
+							Full-Stack Developer | March 2023 - Present | Surat, India
 						</p>
 					</div>
 
@@ -45,8 +43,6 @@ const experienceData = [
 	},
 	{
 		title: "2022",
-		mobileTitle: "Late 2022",
-		description: "Completed intensive full-stack development training at Masai School.",
 		content: (
 			<div className="group relative p-4 sm:p-8 bg-neutral-900/50 backdrop-blur-sm rounded-2xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
 				<div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -79,8 +75,6 @@ const experienceData = [
 	},
 	{
 		title: "2021",
-		mobileTitle: "Early 2021",
-		description: "Started my engineering journey at L. D. College of Engineering.",
 		content: (
 			<div className="group relative p-4 sm:p-8 bg-neutral-900/50 backdrop-blur-sm rounded-2xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
 				<div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
