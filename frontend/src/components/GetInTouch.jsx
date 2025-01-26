@@ -82,13 +82,13 @@ const GetInTouch = () => {
 									<span>+91 8866319970</span>
 								</a>
 								<a
-									href="mailto:abhayfaldu1922@gmail.com"
+									href="mailto:dev@abhayfaldu.com"
 									className="flex items-center gap-4 text-neutral-400 hover:text-white transition-colors"
 								>
 									<div className="h-12 w-12 rounded-lg bg-neutral-900/50 backdrop-blur-sm flex items-center justify-center border border-neutral-700/50">
 										<HiMail className="h-6 w-6" />
 									</div>
-									<span>abhayfaldu1922@gmail.com</span>
+									<span>dev@abhayfaldu.com</span>
 								</a>
 								<div className="flex items-center gap-4 text-neutral-400">
 									<div className="h-12 w-12 rounded-lg bg-neutral-900/50 backdrop-blur-sm flex items-center justify-center border border-neutral-700/50">

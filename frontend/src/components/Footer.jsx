@@ -127,10 +127,10 @@ const Footer = () => {
 								</p>
 								<p>
 									<a
-										href="mailto:abhayfaldu1922@gmail.com"
+										href="mailto:dev@abhayfaldu.com"
 										className="hover:text-white transition-colors"
 									>
-										abhayfaldu1922@gmail.com
+										dev@abhayfaldu.com
 									</a>
 								</p>
 								<p>
