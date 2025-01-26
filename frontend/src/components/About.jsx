@@ -36,8 +36,8 @@ const About = () => {
 						>
 							<div className="absolute inset-0 rounded-2xl overflow-hidden">
 								<img
-									src="/assets/abhay.jpg"
-									alt="Abhay Faldu"
+									src="/assets/giphy.gif"
+									alt="giphy"
 									className="w-full h-full object-cover object-center"
 								/>
 							</div>
@@ -54,15 +54,10 @@ const About = () => {
 							<div className="space-y-4">
 								<h3 className="text-2xl font-bold text-neutral-200">Full Stack Developer</h3>
 								<p className="text-neutral-400 leading-relaxed">
-									Hi there! I'm Abhay Faldu, a passionate Full Stack Developer with expertise in
-									building modern web applications. I specialize in both frontend and backend
-									development, with a strong focus on creating seamless user experiences.
+									Hi there! I'm Abhay Faldu, a Full Stack Developer with 1+ years of experience in building scalable applications and backend APIs. Currently working at Webledger Solutions, I specialize in developing robust financial platforms using Vue.js, TypeScript, and Adonis.js.
 								</p>
 								<p className="text-neutral-400 leading-relaxed">
-									With a deep understanding of JavaScript and its ecosystem, I've worked on various
-									projects ranging from e-commerce platforms to real-time applications. I'm
-									particularly interested in building scalable solutions that solve real-world
-									problems.
+									I have extensive experience in both MERN stack and Vue.js ecosystem, having built everything from customizable dashboards to real-time multiplayer games. I'm all about creating efficient solutions that combine beautiful design with powerful technology, ensuring 100% on-time project delivery.
 								</p>
 							</div>
 
@@ -71,16 +66,16 @@ const About = () => {
 								<h4 className="text-lg font-semibold text-neutral-300">Core Skills</h4>
 								<div className="flex flex-wrap gap-2">
 									{[
-										"JavaScript",
-										"TypeScript",
-										"React.js",
 										"Vue.js",
+										"TypeScript",
+										"Adonis.js",
+										"MySQL",
+										"React.js",
 										"Node.js",
 										"Express.js",
-										"AdonisJS",
 										"MongoDB",
-										"SQL",
 										"Git",
+										"Docker"
 									].map((skill) => (
 										<span
 											key={skill}
