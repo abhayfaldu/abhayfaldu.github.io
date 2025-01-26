@@ -32,7 +32,7 @@ const About = () => {
 							whileInView={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.8 }}
 							viewport={{ once: true }}
-							className="relative aspect-square"
+							className="relative aspect-square w-full sm:w-3/4 md:w-2/3 lg:w-full mx-auto"
 						>
 							<div className="absolute inset-0 rounded-2xl overflow-hidden">
 								<img

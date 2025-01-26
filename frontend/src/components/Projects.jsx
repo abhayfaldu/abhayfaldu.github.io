@@ -94,7 +94,7 @@ const Projects = () => {
 								transition={{ duration: 0.8, delay: index * 0.2 }}
 								viewport={{ once: true }}
 								className={cn(
-									"grid gap-8 items-center",
+									"grid gap-8 items-start",
 									index % 2 === 0
 										? "lg:grid-cols-[1fr,1.5fr]"
 										: "lg:grid-cols-[1.5fr,1fr] lg:grid-flow-dense"
