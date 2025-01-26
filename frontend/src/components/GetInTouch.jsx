@@ -118,7 +118,7 @@ const GetInTouch = () => {
 										<BsTwitter className="h-5 w-5" />
 									</a>
 									<a
-										href="https://www.linkedin.com/in/abhay-faldu-493b92211/"
+										href="https://www.linkedin.com/in/abhayfaldu/"
 										target="_blank"
 										rel="noopener noreferrer"
 										className="h-12 w-12 rounded-lg bg-neutral-900/50 backdrop-blur-sm flex items-center justify-center border border-neutral-700/50 text-neutral-400 hover:text-white transition-colors"

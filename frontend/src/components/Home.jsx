@@ -63,7 +63,7 @@ const Home = () => {
 									<BsGithub className="w-6 h-6" />
 								</a>
 								<a
-									href="https://www.linkedin.com/in/abhay-faldu-493b92211/"
+									href="https://www.linkedin.com/in/abhayfaldu/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className={cn(

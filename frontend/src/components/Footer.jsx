@@ -12,7 +12,7 @@ const socialLinks = [
 	},
 	{
 		icon: <BsLinkedin className="w-5 h-5" />,
-		href: "https://www.linkedin.com/in/abhay-faldu-493b92211/",
+		href: "https://www.linkedin.com/in/abhayfaldu/",
 		label: "LinkedIn",
 	},
 	{

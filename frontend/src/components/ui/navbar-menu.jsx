@@ -109,7 +109,7 @@ const NavbarMenu = () => {
 							</div>
 							<div className="hidden sm:flex items-center gap-6">
 								<motion.a
-									href="/assets/fw19_095-Abhay-Faldu-Resume.pdf"
+									href="/assets/Abhay_Faldu_Resume.pdf"
 									target="_blank"
 									rel="noopener noreferrer"
 									whileHover={{ scale: 1.05 }}
@@ -174,7 +174,7 @@ const NavbarMenu = () => {
 								</motion.a>
 							))}
 							<motion.a
-								href="/assets/fw19_095-Abhay-Faldu-Resume.pdf"
+								href="/assets/Abhay_Faldu_Resume.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}

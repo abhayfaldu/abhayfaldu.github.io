@@ -89,7 +89,7 @@ const About = () => {
 
 							{/* Action Buttons */}
 							<div className="flex items-center gap-4 pt-4">
-								<GradientBorderButton href="/assets/fw19_095-Abhay-Faldu-Resume.pdf" external>
+								<GradientBorderButton href="/assets/Abhay_Faldu_Resume.pdf" external>
 									<HiExternalLink className="mr-2 h-5 w-5 inline-block" />
 									Resume
 								</GradientBorderButton>
