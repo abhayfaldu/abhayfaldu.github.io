@@ -156,7 +156,7 @@ const Footer = () => {
 						className="mt-12 pt-8 border-t border-neutral-800"
 					>
 						<div className="text-center text-neutral-400">
-							<p>© {currentYear} Abhay Faldu. All rights reserved.</p>
+							<p>Made with ❤️ by Abhay Faldu</p>
 						</div>
 					</motion.div>
 				</div>
