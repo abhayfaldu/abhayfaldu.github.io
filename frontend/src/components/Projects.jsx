@@ -12,10 +12,9 @@ const projectsData = [
 		deployLink: "https://lap-den.vercel.app/",
 		githubLink: "https://github.com/abhayfaldu/Dell.com_clone",
 		features: [
-			"Browse and purchase laptops and accessories",
-			"Product filtering and sorting",
-			"Enhanced user experience",
-			"Responsive design",
+			"Built an <strong>e-commerce platform</strong> allowing users to browse and purchase laptops and accessories.",
+			"Developed features like <strong>product filtering, sorting</strong>, and a <strong>search functionality</strong> to improve UX.",
+			"Collaborated with a team to deliver the project within <strong>6 days</strong>, ensuring <strong>responsiveness</strong> and <strong>functionality</strong>.",
 		],
 		duration: 6,
 		techStacks: ["JavaScript", "React.js", "Redux", "Node.js", "Express.js", "MongoDB", "ChakraUI"],
@@ -28,10 +27,9 @@ const projectsData = [
 		deployLink: "https://chanda-kaudi-game.vercel.app/",
 		githubLink: "https://github.com/abhayfaldu/Chanda_kaudi_game",
 		features: [
-			"Real-time multiplayer gameplay",
-			"Live chat functionality",
-			"Traditional Indian board game",
-			"Intuitive gameplay",
+			"Developed a digital adaptation of a traditional <strong>Indian board game</strong> during a <strong>2-day hackathon</strong>.",
+			"Implemented <strong>real-time multiplayer gameplay</strong> with <strong>live chat functionality</strong> using <strong>Socket.io</strong>.",
+			"Collaborated with teammates to ensure smooth <strong>user experience</strong> and <strong>intuitive gameplay</strong>, securing <strong>3rd place</strong>.",
 		],
 		duration: 2,
 		techStacks: [
@@ -52,10 +50,9 @@ const projectsData = [
 		deployLink: "",
 		githubLink: "https://github.com/abhayfaldu/shopzon-backend",
 		features: [
-			"User authentication",
-			"Product management",
-			"Order processing",
-			"Secure implementation",
+			"Developed a <strong>robust backend</strong> using <strong>MVC architecture</strong> to support <strong>user authentication</strong> and <strong>product management</strong>.",
+			"Developed <strong>APIs</strong> for functionalities like <strong>login, signup, filtering, sorting,</strong> and <strong>order processing</strong>.",
+			"Focused on <strong>secure implementation</strong> with <strong>JWT for authentication</strong> and <strong>Bcrypt</strong> for password hashing.",
 		],
 		duration: 10,
 		techStacks: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "Bcrypt"],
@@ -125,11 +122,11 @@ const Projects = () => {
 									{/* Features */}
 									<div className="space-y-4">
 										<h4 className="text-lg font-semibold text-neutral-300">Key Features</h4>
-										<ul className="grid grid-cols-2 gap-2">
+										<ul className="grid grid-cols-1 gap-2">
 											{project.features.map((feature, idx) => (
 												<li key={idx} className="text-neutral-400 text-sm flex items-center gap-2">
 													<span className="h-1.5 w-1.5 rounded-full bg-purple-500/70" />
-													{feature}
+													<div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: feature }} />
 												</li>
 											))}
 										</ul>
